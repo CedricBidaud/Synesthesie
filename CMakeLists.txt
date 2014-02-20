@@ -17,6 +17,11 @@ add_subdirectory(third-party/glew-1.10.0)
 # IMGUI :
 include_directories(third-party/my_imgui)
 
+#FMOD
+include_directories(/usr/include/FMOD)
+# set the path to the library folder
+link_directories(/usr/lib)
+
 # Enable C++11 on GCC 4.4+
 set(CMAKE_CXX_FLAGS "-std=c++0x")
 
@@ -24,4 +29,4 @@ set(CMAKE_CXX_FLAGS "-std=c++0x")
 file(GLOB_RECURSE SRC_FILES src/*.cpp src/*.hpp)
 
 add_executable(PartyKel ${SRC_FILES})
-target_link_libraries(PartyKel glew ${OPENGL_LIBRARIES} ${SDL_LIBRARY})
+target_link_libraries(PartyKel glew ${OPENGL_LIBRARIES} ${SDL_LIBRARY} libfmodex64.so)

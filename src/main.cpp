@@ -14,12 +14,13 @@
 #include "ParticleManager.hpp"
 #include "ConstantForce.hpp"
 #include "Leapfrog.hpp"
-#include "Polygon.hpp"
-#include "PolygonForce.hpp"
+
 #include "HookForce.hpp"
 #include "RepulsiveForce.hpp"
 #include "StickyForce.hpp"
 #include "BrakeForce.hpp"
+
+#include "SoundManager.hpp"
 
 #include "imgui.h"
 #include "imguiRenderGL.h"
@@ -46,8 +47,18 @@ int destroy_shader(ShaderGLSL & shader);
 
 int main() {
 	
-    WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Newton was a Geek");
+    WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Synesthesie");
     wm.setFramerate(30);
+
+	// ----
+	// SOUND
+	// ----
+	
+	SoundManager soundManager;
+	soundManager.Init();
+	float spectrum[4096];
+
+	
 
 	// ----
 	// SHADERS
@@ -163,7 +174,7 @@ int main() {
 	}
 	
 	bool ihm = true;
-	bool ihmForTom = true;
+	bool ihmForTom = false;
     
     bool is_lClicPressed = false;
     
@@ -286,6 +297,12 @@ int main() {
 
         // Rendu
         renderer.clear();
+        
+        soundManager.GetSpectrum(spectrum);
+        //std::cout << soundManager.GetRelMaxFrequency(spectrum, 0, 1500) << std::endl;
+		repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
+		//std::cout << repulsiveForce.m_fLInf << std::endl;
+		soundManager.Update();
         
         if(open){
 			particleManager.addRandomParticles(1);

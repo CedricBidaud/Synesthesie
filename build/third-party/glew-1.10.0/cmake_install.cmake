@@ -1,4 +1,4 @@
-# Install script for directory: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/third-party/glew-1.10.0
+# Install script for directory: /home/tom/Documents/Synesthesie/third-party/glew-1.10.0
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
