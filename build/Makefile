@@ -99,17 +99,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PartyKel
+# Target rules for targets named Synesthésie
 
 # Build rule for target.
-PartyKel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 PartyKel
-.PHONY : PartyKel
+Synesthésie: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Synesthésie
+.PHONY : Synesthésie
 
 # fast build rule for target.
-PartyKel/fast:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/build
-.PHONY : PartyKel/fast
+Synesthésie/fast:
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/build
+.PHONY : Synesthésie/fast
 
 #=============================================================================
 # Target rules for targets named glew
@@ -129,7 +129,7 @@ src/BrakeForce.o: src/BrakeForce.cpp.o
 
 # target to build an object file
 src/BrakeForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.o
 .PHONY : src/BrakeForce.cpp.o
 
 src/BrakeForce.i: src/BrakeForce.cpp.i
@@ -137,7 +137,7 @@ src/BrakeForce.i: src/BrakeForce.cpp.i
 
 # target to preprocess a source file
 src/BrakeForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.i
 .PHONY : src/BrakeForce.cpp.i
 
 src/BrakeForce.s: src/BrakeForce.cpp.s
@@ -145,7 +145,7 @@ src/BrakeForce.s: src/BrakeForce.cpp.s
 
 # target to generate assembly for a file
 src/BrakeForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.s
 .PHONY : src/BrakeForce.cpp.s
 
 src/ConstantForce.o: src/ConstantForce.cpp.o
@@ -153,7 +153,7 @@ src/ConstantForce.o: src/ConstantForce.cpp.o
 
 # target to build an object file
 src/ConstantForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/ConstantForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ConstantForce.cpp.o
 .PHONY : src/ConstantForce.cpp.o
 
 src/ConstantForce.i: src/ConstantForce.cpp.i
@@ -161,7 +161,7 @@ src/ConstantForce.i: src/ConstantForce.cpp.i
 
 # target to preprocess a source file
 src/ConstantForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/ConstantForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ConstantForce.cpp.i
 .PHONY : src/ConstantForce.cpp.i
 
 src/ConstantForce.s: src/ConstantForce.cpp.s
@@ -169,7 +169,7 @@ src/ConstantForce.s: src/ConstantForce.cpp.s
 
 # target to generate assembly for a file
 src/ConstantForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/ConstantForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ConstantForce.cpp.s
 .PHONY : src/ConstantForce.cpp.s
 
 src/Force.o: src/Force.cpp.o
@@ -177,7 +177,7 @@ src/Force.o: src/Force.cpp.o
 
 # target to build an object file
 src/Force.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Force.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Force.cpp.o
 .PHONY : src/Force.cpp.o
 
 src/Force.i: src/Force.cpp.i
@@ -185,7 +185,7 @@ src/Force.i: src/Force.cpp.i
 
 # target to preprocess a source file
 src/Force.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Force.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Force.cpp.i
 .PHONY : src/Force.cpp.i
 
 src/Force.s: src/Force.cpp.s
@@ -193,7 +193,7 @@ src/Force.s: src/Force.cpp.s
 
 # target to generate assembly for a file
 src/Force.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Force.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Force.cpp.s
 .PHONY : src/Force.cpp.s
 
 src/HookForce.o: src/HookForce.cpp.o
@@ -201,7 +201,7 @@ src/HookForce.o: src/HookForce.cpp.o
 
 # target to build an object file
 src/HookForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/HookForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/HookForce.cpp.o
 .PHONY : src/HookForce.cpp.o
 
 src/HookForce.i: src/HookForce.cpp.i
@@ -209,7 +209,7 @@ src/HookForce.i: src/HookForce.cpp.i
 
 # target to preprocess a source file
 src/HookForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/HookForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/HookForce.cpp.i
 .PHONY : src/HookForce.cpp.i
 
 src/HookForce.s: src/HookForce.cpp.s
@@ -217,7 +217,7 @@ src/HookForce.s: src/HookForce.cpp.s
 
 # target to generate assembly for a file
 src/HookForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/HookForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/HookForce.cpp.s
 .PHONY : src/HookForce.cpp.s
 
 src/Leapfrog.o: src/Leapfrog.cpp.o
@@ -225,7 +225,7 @@ src/Leapfrog.o: src/Leapfrog.cpp.o
 
 # target to build an object file
 src/Leapfrog.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o
 .PHONY : src/Leapfrog.cpp.o
 
 src/Leapfrog.i: src/Leapfrog.cpp.i
@@ -233,7 +233,7 @@ src/Leapfrog.i: src/Leapfrog.cpp.i
 
 # target to preprocess a source file
 src/Leapfrog.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.i
 .PHONY : src/Leapfrog.cpp.i
 
 src/Leapfrog.s: src/Leapfrog.cpp.s
@@ -241,7 +241,7 @@ src/Leapfrog.s: src/Leapfrog.cpp.s
 
 # target to generate assembly for a file
 src/Leapfrog.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.s
 .PHONY : src/Leapfrog.cpp.s
 
 src/ParticleManager.o: src/ParticleManager.cpp.o
@@ -249,7 +249,7 @@ src/ParticleManager.o: src/ParticleManager.cpp.o
 
 # target to build an object file
 src/ParticleManager.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o
 .PHONY : src/ParticleManager.cpp.o
 
 src/ParticleManager.i: src/ParticleManager.cpp.i
@@ -257,7 +257,7 @@ src/ParticleManager.i: src/ParticleManager.cpp.i
 
 # target to preprocess a source file
 src/ParticleManager.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.i
 .PHONY : src/ParticleManager.cpp.i
 
 src/ParticleManager.s: src/ParticleManager.cpp.s
@@ -265,7 +265,7 @@ src/ParticleManager.s: src/ParticleManager.cpp.s
 
 # target to generate assembly for a file
 src/ParticleManager.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.s
 .PHONY : src/ParticleManager.cpp.s
 
 src/Polygon.o: src/Polygon.cpp.o
@@ -273,7 +273,7 @@ src/Polygon.o: src/Polygon.cpp.o
 
 # target to build an object file
 src/Polygon.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Polygon.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o
 .PHONY : src/Polygon.cpp.o
 
 src/Polygon.i: src/Polygon.cpp.i
@@ -281,7 +281,7 @@ src/Polygon.i: src/Polygon.cpp.i
 
 # target to preprocess a source file
 src/Polygon.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Polygon.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.i
 .PHONY : src/Polygon.cpp.i
 
 src/Polygon.s: src/Polygon.cpp.s
@@ -289,7 +289,7 @@ src/Polygon.s: src/Polygon.cpp.s
 
 # target to generate assembly for a file
 src/Polygon.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/Polygon.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.s
 .PHONY : src/Polygon.cpp.s
 
 src/PolygonForce.o: src/PolygonForce.cpp.o
@@ -297,7 +297,7 @@ src/PolygonForce.o: src/PolygonForce.cpp.o
 
 # target to build an object file
 src/PolygonForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/PolygonForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o
 .PHONY : src/PolygonForce.cpp.o
 
 src/PolygonForce.i: src/PolygonForce.cpp.i
@@ -305,7 +305,7 @@ src/PolygonForce.i: src/PolygonForce.cpp.i
 
 # target to preprocess a source file
 src/PolygonForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/PolygonForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.i
 .PHONY : src/PolygonForce.cpp.i
 
 src/PolygonForce.s: src/PolygonForce.cpp.s
@@ -313,7 +313,7 @@ src/PolygonForce.s: src/PolygonForce.cpp.s
 
 # target to generate assembly for a file
 src/PolygonForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/PolygonForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.s
 .PHONY : src/PolygonForce.cpp.s
 
 src/RepulsiveForce.o: src/RepulsiveForce.cpp.o
@@ -321,7 +321,7 @@ src/RepulsiveForce.o: src/RepulsiveForce.cpp.o
 
 # target to build an object file
 src/RepulsiveForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/RepulsiveForce.cpp.o
 .PHONY : src/RepulsiveForce.cpp.o
 
 src/RepulsiveForce.i: src/RepulsiveForce.cpp.i
@@ -329,7 +329,7 @@ src/RepulsiveForce.i: src/RepulsiveForce.cpp.i
 
 # target to preprocess a source file
 src/RepulsiveForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/RepulsiveForce.cpp.i
 .PHONY : src/RepulsiveForce.cpp.i
 
 src/RepulsiveForce.s: src/RepulsiveForce.cpp.s
@@ -337,7 +337,7 @@ src/RepulsiveForce.s: src/RepulsiveForce.cpp.s
 
 # target to generate assembly for a file
 src/RepulsiveForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/RepulsiveForce.cpp.s
 .PHONY : src/RepulsiveForce.cpp.s
 
 src/StickyForce.o: src/StickyForce.cpp.o
@@ -345,7 +345,7 @@ src/StickyForce.o: src/StickyForce.cpp.o
 
 # target to build an object file
 src/StickyForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o
 .PHONY : src/StickyForce.cpp.o
 
 src/StickyForce.i: src/StickyForce.cpp.i
@@ -353,7 +353,7 @@ src/StickyForce.i: src/StickyForce.cpp.i
 
 # target to preprocess a source file
 src/StickyForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/StickyForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.i
 .PHONY : src/StickyForce.cpp.i
 
 src/StickyForce.s: src/StickyForce.cpp.s
@@ -361,7 +361,7 @@ src/StickyForce.s: src/StickyForce.cpp.s
 
 # target to generate assembly for a file
 src/StickyForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/StickyForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.s
 .PHONY : src/StickyForce.cpp.s
 
 src/UniversalForce.o: src/UniversalForce.cpp.o
@@ -369,7 +369,7 @@ src/UniversalForce.o: src/UniversalForce.cpp.o
 
 # target to build an object file
 src/UniversalForce.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o
 .PHONY : src/UniversalForce.cpp.o
 
 src/UniversalForce.i: src/UniversalForce.cpp.i
@@ -377,7 +377,7 @@ src/UniversalForce.i: src/UniversalForce.cpp.i
 
 # target to preprocess a source file
 src/UniversalForce.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.i
 .PHONY : src/UniversalForce.cpp.i
 
 src/UniversalForce.s: src/UniversalForce.cpp.s
@@ -385,7 +385,7 @@ src/UniversalForce.s: src/UniversalForce.cpp.s
 
 # target to generate assembly for a file
 src/UniversalForce.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.s
 .PHONY : src/UniversalForce.cpp.s
 
 src/imgui.o: src/imgui.cpp.o
@@ -393,7 +393,7 @@ src/imgui.o: src/imgui.cpp.o
 
 # target to build an object file
 src/imgui.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/imgui.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/imgui.cpp.o
 .PHONY : src/imgui.cpp.o
 
 src/imgui.i: src/imgui.cpp.i
@@ -401,7 +401,7 @@ src/imgui.i: src/imgui.cpp.i
 
 # target to preprocess a source file
 src/imgui.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/imgui.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/imgui.cpp.i
 .PHONY : src/imgui.cpp.i
 
 src/imgui.s: src/imgui.cpp.s
@@ -409,7 +409,7 @@ src/imgui.s: src/imgui.cpp.s
 
 # target to generate assembly for a file
 src/imgui.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/imgui.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/imgui.cpp.s
 .PHONY : src/imgui.cpp.s
 
 src/imguiRenderGL.o: src/imguiRenderGL.cpp.o
@@ -417,7 +417,7 @@ src/imguiRenderGL.o: src/imguiRenderGL.cpp.o
 
 # target to build an object file
 src/imguiRenderGL.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.o
 .PHONY : src/imguiRenderGL.cpp.o
 
 src/imguiRenderGL.i: src/imguiRenderGL.cpp.i
@@ -425,7 +425,7 @@ src/imguiRenderGL.i: src/imguiRenderGL.cpp.i
 
 # target to preprocess a source file
 src/imguiRenderGL.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.i
 .PHONY : src/imguiRenderGL.cpp.i
 
 src/imguiRenderGL.s: src/imguiRenderGL.cpp.s
@@ -433,7 +433,7 @@ src/imguiRenderGL.s: src/imguiRenderGL.cpp.s
 
 # target to generate assembly for a file
 src/imguiRenderGL.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.s
 .PHONY : src/imguiRenderGL.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -441,7 +441,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -449,7 +449,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -457,7 +457,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/renderer/GLtools.o: src/renderer/GLtools.cpp.o
@@ -465,7 +465,7 @@ src/renderer/GLtools.o: src/renderer/GLtools.cpp.o
 
 # target to build an object file
 src/renderer/GLtools.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/GLtools.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o
 .PHONY : src/renderer/GLtools.cpp.o
 
 src/renderer/GLtools.i: src/renderer/GLtools.cpp.i
@@ -473,7 +473,7 @@ src/renderer/GLtools.i: src/renderer/GLtools.cpp.i
 
 # target to preprocess a source file
 src/renderer/GLtools.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/GLtools.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.i
 .PHONY : src/renderer/GLtools.cpp.i
 
 src/renderer/GLtools.s: src/renderer/GLtools.cpp.s
@@ -481,7 +481,7 @@ src/renderer/GLtools.s: src/renderer/GLtools.cpp.s
 
 # target to generate assembly for a file
 src/renderer/GLtools.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/GLtools.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.s
 .PHONY : src/renderer/GLtools.cpp.s
 
 src/renderer/ParticleRenderer2D.o: src/renderer/ParticleRenderer2D.cpp.o
@@ -489,7 +489,7 @@ src/renderer/ParticleRenderer2D.o: src/renderer/ParticleRenderer2D.cpp.o
 
 # target to build an object file
 src/renderer/ParticleRenderer2D.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/ParticleRenderer2D.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o
 .PHONY : src/renderer/ParticleRenderer2D.cpp.o
 
 src/renderer/ParticleRenderer2D.i: src/renderer/ParticleRenderer2D.cpp.i
@@ -497,7 +497,7 @@ src/renderer/ParticleRenderer2D.i: src/renderer/ParticleRenderer2D.cpp.i
 
 # target to preprocess a source file
 src/renderer/ParticleRenderer2D.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/ParticleRenderer2D.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.i
 .PHONY : src/renderer/ParticleRenderer2D.cpp.i
 
 src/renderer/ParticleRenderer2D.s: src/renderer/ParticleRenderer2D.cpp.s
@@ -505,7 +505,7 @@ src/renderer/ParticleRenderer2D.s: src/renderer/ParticleRenderer2D.cpp.s
 
 # target to generate assembly for a file
 src/renderer/ParticleRenderer2D.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/ParticleRenderer2D.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.s
 .PHONY : src/renderer/ParticleRenderer2D.cpp.s
 
 src/renderer/WindowManager.o: src/renderer/WindowManager.cpp.o
@@ -513,7 +513,7 @@ src/renderer/WindowManager.o: src/renderer/WindowManager.cpp.o
 
 # target to build an object file
 src/renderer/WindowManager.cpp.o:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/WindowManager.cpp.o
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o
 .PHONY : src/renderer/WindowManager.cpp.o
 
 src/renderer/WindowManager.i: src/renderer/WindowManager.cpp.i
@@ -521,7 +521,7 @@ src/renderer/WindowManager.i: src/renderer/WindowManager.cpp.i
 
 # target to preprocess a source file
 src/renderer/WindowManager.cpp.i:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/WindowManager.cpp.i
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.i
 .PHONY : src/renderer/WindowManager.cpp.i
 
 src/renderer/WindowManager.s: src/renderer/WindowManager.cpp.s
@@ -529,7 +529,7 @@ src/renderer/WindowManager.s: src/renderer/WindowManager.cpp.s
 
 # target to generate assembly for a file
 src/renderer/WindowManager.cpp.s:
-	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/renderer/WindowManager.cpp.s
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.s
 .PHONY : src/renderer/WindowManager.cpp.s
 
 # Help Target
@@ -538,7 +538,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... PartyKel"
+	@echo "... Synesthésie"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... glew"

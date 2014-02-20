@@ -43,7 +43,7 @@ int destroy_shader(ShaderGLSL & shader);
 
 int main() {
 	
-    WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Newton was a Geek");
+    WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Synesthésie");
     wm.setFramerate(30);
 
 	// ----

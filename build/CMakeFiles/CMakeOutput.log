@@ -4001,3 +4001,243 @@ Linking C executable cmTryCompileExec2048088451
 make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
 
 
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3941904763/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3941904763.dir/build.make CMakeFiles/cmTryCompileExec3941904763.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3941904763.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3941904763.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3941904763
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3941904763.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3941904763.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3941904763 -rdynamic -lX11 -lXext 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1380527482/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1380527482.dir/build.make CMakeFiles/cmTryCompileExec1380527482.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1380527482.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec1380527482.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1380527482
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1380527482.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec1380527482.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1380527482 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3710584284/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3710584284.dir/build.make CMakeFiles/cmTryCompileExec3710584284.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3710584284.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3710584284.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3710584284
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3710584284.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3710584284.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3710584284 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3865170018/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3865170018.dir/build.make CMakeFiles/cmTryCompileExec3865170018.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3865170018.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3865170018.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3865170018
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3865170018.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3865170018.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3865170018 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2553833646/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2553833646.dir/build.make CMakeFiles/cmTryCompileExec2553833646.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2553833646.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2553833646.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2553833646
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2553833646.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2553833646.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2553833646 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec750675638/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec750675638.dir/build.make CMakeFiles/cmTryCompileExec750675638.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec750675638.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec750675638.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec750675638
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec750675638.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec750675638.dir/CheckFunctionExists.c.o  -o cmTryCompileExec750675638 -rdynamic -lICE 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3690079625/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3690079625.dir/build.make CMakeFiles/cmTryCompileExec3690079625.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3690079625.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3690079625.dir/CheckIncludeFiles.c.o   -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3690079625
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3690079625.dir/link.txt --verbose=1
+/usr/bin/cc         CMakeFiles/cmTryCompileExec3690079625.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3690079625 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2614780395/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2614780395.dir/build.make CMakeFiles/cmTryCompileExec2614780395.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2614780395.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2614780395.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2614780395
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2614780395.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2614780395.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2614780395 -rdynamic -lpthread 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3096541818/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3096541818.dir/build.make CMakeFiles/cmTryCompileExec3096541818.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3096541818.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3096541818.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3096541818
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3096541818.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3096541818.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3096541818 -rdynamic -lX11 -lXext 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3898953096/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3898953096.dir/build.make CMakeFiles/cmTryCompileExec3898953096.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3898953096.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3898953096.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3898953096
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3898953096.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3898953096.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3898953096 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec898345426/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec898345426.dir/build.make CMakeFiles/cmTryCompileExec898345426.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec898345426.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec898345426.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec898345426
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec898345426.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec898345426.dir/CheckFunctionExists.c.o  -o cmTryCompileExec898345426 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec462873037/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec462873037.dir/build.make CMakeFiles/cmTryCompileExec462873037.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec462873037.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec462873037.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec462873037
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec462873037.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec462873037.dir/CheckFunctionExists.c.o  -o cmTryCompileExec462873037 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2590794717/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2590794717.dir/build.make CMakeFiles/cmTryCompileExec2590794717.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2590794717.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2590794717.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2590794717
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2590794717.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2590794717.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2590794717 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3909877848/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3909877848.dir/build.make CMakeFiles/cmTryCompileExec3909877848.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3909877848.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3909877848.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3909877848
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3909877848.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3909877848.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3909877848 -rdynamic -lICE 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2248025544/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2248025544.dir/build.make CMakeFiles/cmTryCompileExec2248025544.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2248025544.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2248025544.dir/CheckIncludeFiles.c.o   -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2248025544
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2248025544.dir/link.txt --verbose=1
+/usr/bin/cc         CMakeFiles/cmTryCompileExec2248025544.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2248025544 -rdynamic 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2725825319/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2725825319.dir/build.make CMakeFiles/cmTryCompileExec2725825319.dir/build
+make[1]: entrant dans le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+/usr/bin/cmake -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2725825319.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2725825319.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2725825319
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2725825319.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2725825319.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2725825319 -rdynamic -lpthread 
+make[1]: quittant le répertoire « /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/CMakeTmp »
+
+
