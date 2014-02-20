@@ -25,7 +25,19 @@ namespace imac3 {
 	void UniversalForce::apply(ParticleManager &pm) {
 		unsigned int count = pm.getSize();
 		
+		std::vector<unsigned int> toErase;
+		bool mustErase = false;
+		
 		for(int i = 0; i < count; ++i){
+			// -------------------------------------
+			// ----- calcul de la durée de vie -----
+			// -------------------------------------
+			if(pm.decreaseParticleLifetime(i) == true){
+				toErase.push_back(i);
+				mustErase = true;
+			}
+			
+			
 			// ---------------------
 			// ----- Répulsion -----
 			// ---------------------
@@ -117,6 +129,12 @@ namespace imac3 {
 			}
 			// fin Brake
 			
+		}
+		// effacer les particules en fin de vie
+		if(mustErase){
+			for(unsigned int i = 0; i < toErase.size(); ++i){
+				pm.killParticle(i);
+			}
 		}
 	}
 

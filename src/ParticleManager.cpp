@@ -18,6 +18,7 @@ unsigned int ParticleManager::addParticle(glm::vec2 position, float mass, glm::v
 	m_colorArray.push_back(color);
 	m_velocityArray.push_back(velocity);
 	m_forceArray.push_back(glm::vec2(0.f));
+	m_lifeTime.push_back(100);
 	return m_positionArray.size() - 1;
 }
 
@@ -109,12 +110,31 @@ void ParticleManager::resetParticleForce(unsigned int i){
 	//~ std::cout << "After : " << m_forceArray[i].x << ", " << m_forceArray[i].y << std::endl;
 }
 
+
+bool ParticleManager::decreaseParticleLifetime(unsigned int i) {
+	//~ std::cout << "lifetime : " << m_lifeTime[i] << std::endl;
+	return (--m_lifeTime[i] == 0);
+}
+
+void ParticleManager::killParticle(unsigned int i){
+	m_positionArray.erase(m_positionArray.begin()+i);
+	m_massArray.erase(m_massArray.begin()+i);
+	m_colorArray.erase(m_colorArray.begin()+i);
+	m_velocityArray.erase(m_velocityArray.begin()+i);
+	m_forceArray.erase(m_forceArray.begin()+i);
+	m_lifeTime.erase(m_lifeTime.begin()+i);
+	//~ m_instrument.erase(m_instrument.begin()+i);
+}
+
+
 void ParticleManager::clean(){
 	m_positionArray.clear();
 	m_massArray.clear();
 	m_colorArray.clear();
 	m_velocityArray.clear();
 	m_forceArray.clear();
+	m_lifeTime.clear();
+	m_instrument.clear();
 }
 
 } // end namespace imac3

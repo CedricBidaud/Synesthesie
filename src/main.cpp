@@ -12,14 +12,7 @@
 #include <vector>
 
 #include "ParticleManager.hpp"
-//~ #include "ConstantForce.hpp"
 #include "Leapfrog.hpp"
-//~ #include "Polygon.hpp"
-//~ #include "PolygonForce.hpp"
-//~ #include "HookForce.hpp"
-//~ #include "RepulsiveForce.hpp"
-//~ #include "StickyForce.hpp"
-//~ #include "BrakeForce.hpp"
 
 #include "UniversalForce.hpp"
 
@@ -95,56 +88,14 @@ int main() {
 
     // Création des particules
     ParticleManager particleManager;
-    particleManager.addRandomParticles(1);
+    //~ particleManager.addRandomParticles(1);
 
 	Leapfrog leapfrog;
-
-	//~ ConstantForce constForce(0.2,0.2);
-
-    // hookForce(K,L)
-    float L = 0.05f;
-    //~ HookForce hookForce(0.2f, 0.15f);
     
     // UniversalForce			 (const Leapfrog& solver, float fKRep, float fKSticky, float fLInf, float fLSup, float fConstK, float fConstL, float dt, float brakeV, float brakeL){
-    UniversalForce universalForce(leapfrog, 			  0.191f, 		0.0f, 			0.145, 		0.159, 		 0.2, 			0.2,			0.0f,	 0.011,			0.159);
+    UniversalForce universalForce(leapfrog, 			  0.191f, 		0.0f, 			0.145, 		0.159, 		 0.2, 			0.2,			0.0f,	 0.011,			0.159);   
     
-    //~ BrakeForce(float dt, float v, float l, const Leapfrog& solver);
-    //~ BrakeForce brakeForce(0.0f, 0.011, 0.159, leapfrog);
-	
-	
-	// ----- Boxes -----
-	//~ static Polygon 		buildBox(glm::vec3 color, 		 glm::vec2 position,  float width, float height, float rotationInDegrees);
-	//~ Polygon box1 = Polygon::buildBox(glm::vec3(0.9,0.8,0.3), glm::vec2(-0.38,-0.2), 0.25, 		   0.12, 		 -78.0f);
-	//~ Polygon box2 = Polygon::buildBox(glm::vec3(0.2,0.2,0.9), glm::vec2(0.1,0.5), 0.05, 		   0.47, 		 30.0f);
-    //~ 
-    //~ Polygon boxL = Polygon::buildBox(glm::vec3(1.0), glm::vec2(-1.0,0.0),0.1,2.0,false);
-    //~ Polygon boxR = Polygon::buildBox(glm::vec3(1.0), glm::vec2(1.0,0.0),0.1,2.0,false);
-    //~ Polygon boxT = Polygon::buildBox(glm::vec3(1.0), glm::vec2(0.0,1.0),2.0,0.1,false);
-    //~ Polygon boxB = Polygon::buildBox(glm::vec3(1.0), glm::vec2(0.0,-1.0),2.0,0.1,false);
-    
-    
-    // ----- Forces de répulsion des boxes -----
-    float polyStickyCoef = 1.005f;
-	
-	//~ PolygonForce box1PolyForce(box1, polyStickyCoef, leapfrog);
-	//~ PolygonForce box2PolyForce(box2, polyStickyCoef, leapfrog);
-	//~ 
-	//~ PolygonForce boxLPolyForce(boxL, polyStickyCoef, leapfrog);
-	//~ PolygonForce boxRPolyForce(boxR, polyStickyCoef, leapfrog);
-	//~ PolygonForce boxTPolyForce(boxT, polyStickyCoef, leapfrog);
-	//~ PolygonForce boxBPolyForce(boxB, polyStickyCoef, leapfrog);
-	
-	// ----- Ajout des boxes et de leurs forces à un vecteur -----
-	// => rendu et application des forces dans la même passe
-	//~ std::vector<std::pair<Polygon, PolygonForce>> polysAndForces;
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(box1, box1PolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(box2, box2PolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxL, boxLPolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxR, boxRPolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxT, boxTPolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxB, boxBPolyForce));
-    
-    //
+
     glm::vec2 click;
     
 	
@@ -310,18 +261,9 @@ int main() {
 		
 		
 		// Simulation
-        //~ constForce.apply(particleManager);
 		universalForce.setDt(dt);
         universalForce.apply(particleManager);
-        
-        //~ brakeForce.setDt(dt);
-        //~ brakeForce.apply(particleManager);
 
-		//~ for(int i = 0; i < polysAndForces.size(); ++i){
-			//~ polysAndForces[i].first.draw(renderer);
-			//~ polysAndForces[i].second.setDt(dt);
-			//~ polysAndForces[i].second.apply(particleManager);
-		//~ }
         
         leapfrog.solve(particleManager, dt);
         
@@ -457,53 +399,7 @@ int main() {
 							click.x = (float(e.button.x) / WINDOW_WIDTH - 0.5f)*2.0;
 							click.y = (float(e.button.y) / WINDOW_HEIGHT - 0.5f)*(-2.0);
 							std::cout << "click : " << click.x << " - " << click.y << std::endl;
-							//~ for(int i = 0; i < polysAndForces.size(); ++i){
-								//~ Polygon poly = polysAndForces[i].first;
-								//~ 
-								//~ float angle = poly.rotationInDegrees;
-								//~ 
-								//~ poly.rotate(-angle);
-								//~ 
-								//~ /*
-								//~ glm::vec2 tempPoint;
-								//~ 
-								//~ 
-								//~ for(int i = 0; i < m_pointsArray.size(); ++i){
-									//~ m_pointsArray[i] = glm::vec2(m_pointsArray[i].x*_cos - m_pointsArray[i].y*_sin, m_pointsArray[i].x*_sin+m_pointsArray[i].y*_cos);
-								//~ }
-								//~ */
-								//~ 
-								//~ float _cos = cos(-3.1416*angle/180.0);
-								//~ float _sin = sin(-3.1416*angle/180.0);
-								//~ 
-								//~ glm::vec2 tempClick = glm::vec2(click.x*_cos - click.y*_sin, click.x*_sin+click.y*_cos);
-								//~ 
-								//~ 
-								//~ float minX = 1000.0;
-								//~ float maxX = -1000.0;
-								//~ float minY = 1000.0;
-								//~ float maxY = -1000.0;
-								//~ 
-								//~ for(int j = 0; j < poly.getSize(); ++j){
-									//~ glm::vec2 p = poly.m_pointsArray[j];
-									//~ (p.x < minX) ? minX = p.x : minX;
-									//~ (p.x > maxX) ? maxX = p.x : maxX;
-									//~ (p.y < minY) ? minY = p.y : minY;
-									//~ (p.y > maxY) ? maxY = p.y : maxY;
-								//~ }
-								//~ 
-								//~ std::cout << "minX : " << minX << ", minY : " << minY << ", maxX : " << maxX << ", maxY : " << maxY << std::endl;
-								//~ 
-								//~ if(tempClick.x > minX && tempClick.x < maxX && tempClick.y > minY && tempClick.y < maxY){
-									//~ std::cout << "In !" << std::endl;
-									//~ polysAndForces.erase(polysAndForces.begin()+i);
-								//~ }else{
-									//~ std::cout << "Out !" << std::endl;
-								//~ }
-								//~ 
-								//~ std::cout << "" << std::endl;
-								//~ 
-							//~ }
+							
 							break;
 							
 						default:

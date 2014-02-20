@@ -426,6 +426,16 @@ core/setup.hpp
 ./core/_swizzle.hpp
 ../third-party/glm-0.9.4.6/glm/gtc/.././core/_swizzle.hpp
 
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/constants.hpp
+../glm.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/../glm.hpp
+../gtc/half_float.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/../gtc/half_float.hpp
+constants.inl
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/constants.inl
+
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/constants.inl
+
 ../third-party/glm-0.9.4.6/glm/gtc/../gtc/half_float.hpp
 ../glm.hpp
 ../third-party/glm-0.9.4.6/glm/gtc/../gtc/../glm.hpp
@@ -433,6 +443,20 @@ half_float.inl
 ../third-party/glm-0.9.4.6/glm/gtc/../gtc/half_float.inl
 
 ../third-party/glm-0.9.4.6/glm/gtc/../gtc/half_float.inl
+
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/quaternion.hpp
+../glm.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../glm.hpp
+../gtc/half_float.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/half_float.hpp
+../gtc/constants.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/../gtc/constants.hpp
+quaternion.inl
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/quaternion.inl
+
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/quaternion.inl
+limits
+-
 
 ../third-party/glm-0.9.4.6/glm/gtc/random.hpp
 ../glm.hpp
@@ -448,9 +472,19 @@ ctime
 cassert
 -
 
-../third-party/my_imgui/imgui.h
+../third-party/glm-0.9.4.6/glm/gtc/type_ptr.hpp
+../glm.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../glm.hpp
+../gtc/half_float.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/half_float.hpp
+../gtc/quaternion.hpp
+../third-party/glm-0.9.4.6/glm/gtc/../gtc/quaternion.hpp
+cstring
+-
+type_ptr.inl
+../third-party/glm-0.9.4.6/glm/gtc/type_ptr.inl
 
-../third-party/my_imgui/imguiRenderGL.h
+../third-party/glm-0.9.4.6/glm/gtc/type_ptr.inl
 
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Force.hpp
 glm/glm.hpp
@@ -466,6 +500,14 @@ iostream
 ParticleManager.hpp
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.hpp
 
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.cpp
+ParticleManager.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.hpp
+renderer/GLtools.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/GLtools.hpp
+glm/gtc/type_ptr.hpp
+-
+
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.hpp
 GL/glew.h
 -
@@ -479,6 +521,12 @@ iostream
 -
 renderer/ParticleRenderer2D.hpp
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/ParticleRenderer2D.hpp
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.cpp
+cmath
+-
+UniversalForce.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
 
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
 iostream
@@ -488,43 +536,13 @@ Force.hpp
 Leapfrog.hpp
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.hpp
 
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/main.cpp
-iostream
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/GLtools.hpp
+GL/glew.h
 -
-fstream
--
-cstdlib
--
-sstream
--
-glm/glm.hpp
--
-glm/gtc/random.hpp
--
-renderer/WindowManager.hpp
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.hpp
-renderer/ParticleRenderer2D.hpp
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/ParticleRenderer2D.hpp
-vector
--
-ParticleManager.hpp
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.hpp
-Leapfrog.hpp
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.hpp
-UniversalForce.hpp
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
-imgui.h
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imgui.h
-imguiRenderGL.h
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imguiRenderGL.h
 
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/ParticleRenderer2D.hpp
 GL/glew.h
 -
 glm/glm.hpp
--
-
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.hpp
-SDL/SDL.h
 -
 
