@@ -4,6 +4,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/PartyKel.dir/src/Force.cpp.o"
   "CMakeFiles/PartyKel.dir/src/imgui.cpp.o"
   "CMakeFiles/PartyKel.dir/src/Polygon.cpp.o"
+  "CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o"
   "CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.o"
   "CMakeFiles/PartyKel.dir/src/PolygonForce.cpp.o"
   "CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o"

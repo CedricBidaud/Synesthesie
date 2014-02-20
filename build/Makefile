@@ -364,6 +364,30 @@ src/StickyForce.cpp.s:
 	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/StickyForce.cpp.s
 .PHONY : src/StickyForce.cpp.s
 
+src/UniversalForce.o: src/UniversalForce.cpp.o
+.PHONY : src/UniversalForce.o
+
+# target to build an object file
+src/UniversalForce.cpp.o:
+	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o
+.PHONY : src/UniversalForce.cpp.o
+
+src/UniversalForce.i: src/UniversalForce.cpp.i
+.PHONY : src/UniversalForce.i
+
+# target to preprocess a source file
+src/UniversalForce.cpp.i:
+	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.i
+.PHONY : src/UniversalForce.cpp.i
+
+src/UniversalForce.s: src/UniversalForce.cpp.s
+.PHONY : src/UniversalForce.s
+
+# target to generate assembly for a file
+src/UniversalForce.cpp.s:
+	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.s
+.PHONY : src/UniversalForce.cpp.s
+
 src/imgui.o: src/imgui.cpp.o
 .PHONY : src/imgui.o
 
@@ -548,6 +572,9 @@ help:
 	@echo "... src/StickyForce.o"
 	@echo "... src/StickyForce.i"
 	@echo "... src/StickyForce.s"
+	@echo "... src/UniversalForce.o"
+	@echo "... src/UniversalForce.i"
+	@echo "... src/UniversalForce.s"
 	@echo "... src/imgui.o"
 	@echo "... src/imgui.i"
 	@echo "... src/imgui.s"

@@ -12,20 +12,24 @@
 #include <vector>
 
 #include "ParticleManager.hpp"
-#include "ConstantForce.hpp"
+//~ #include "ConstantForce.hpp"
 #include "Leapfrog.hpp"
-#include "Polygon.hpp"
-#include "PolygonForce.hpp"
-#include "HookForce.hpp"
-#include "RepulsiveForce.hpp"
-#include "StickyForce.hpp"
-#include "BrakeForce.hpp"
+//~ #include "Polygon.hpp"
+//~ #include "PolygonForce.hpp"
+//~ #include "HookForce.hpp"
+//~ #include "RepulsiveForce.hpp"
+//~ #include "StickyForce.hpp"
+//~ #include "BrakeForce.hpp"
+
+#include "UniversalForce.hpp"
 
 #include "imgui.h"
 #include "imguiRenderGL.h"
 
 static const Uint32 WINDOW_WIDTH = 1024;
 static const Uint32 WINDOW_HEIGHT = 1024;
+static const Uint32 TEXTURE_WIDTH = 1024;
+static const Uint32 TEXTURE_HEIGHT = 1024;
 
 using namespace imac3;
 
@@ -95,16 +99,17 @@ int main() {
 
 	Leapfrog leapfrog;
 
-	ConstantForce constForce(0.2,0.2);
+	//~ ConstantForce constForce(0.2,0.2);
 
     // hookForce(K,L)
     float L = 0.05f;
-    HookForce hookForce(0.2f, 0.15f);
-    //~ RepulsiveForce(float fKRep, float fKSticky, float fLInf, float fLSup);
-    RepulsiveForce repulsiveForce(0.191f, 0.282f, 0.145, 0.159);
+    //~ HookForce hookForce(0.2f, 0.15f);
+    
+    // UniversalForce			 (const Leapfrog& solver, float fKRep, float fKSticky, float fLInf, float fLSup, float fConstK, float fConstL, float dt, float brakeV, float brakeL){
+    UniversalForce universalForce(leapfrog, 			  0.191f, 		0.0f, 			0.145, 		0.159, 		 0.2, 			0.2,			0.0f,	 0.011,			0.159);
     
     //~ BrakeForce(float dt, float v, float l, const Leapfrog& solver);
-    BrakeForce brakeForce(0.0f, 0.011, 0.159, leapfrog);
+    //~ BrakeForce brakeForce(0.0f, 0.011, 0.159, leapfrog);
 	
 	
 	// ----- Boxes -----
@@ -260,7 +265,8 @@ int main() {
 	glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 		glBindTexture(GL_TEXTURE_2D, texColorBuffer);
 			glTexImage2D(
-				GL_TEXTURE_2D, 0, GL_RGB, WINDOW_WIDTH, WINDOW_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
+				//~ GL_TEXTURE_2D, 0, GL_RGB, WINDOW_WIDTH, WINDOW_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
+				GL_TEXTURE_2D, 0, GL_RGB, TEXTURE_WIDTH, TEXTURE_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
 			);
 			
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -291,24 +297,25 @@ int main() {
 			particleManager.addRandomParticles(1);
 		}
 		
+		glViewport(0,0,TEXTURE_WIDTH,TEXTURE_HEIGHT);
 		// Écriture de l'image dans le framebuffer
 		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 			glClear(GL_COLOR_BUFFER_BIT);
 			particleManager.drawParticles(renderer, particleSize);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		
-		
+		glViewport(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
 		// Affichage de la texture (passage dans le shader pour blur et seuillage)
 		renderer.drawQuad(vao, texColorBuffer, quadTriangleCount, blurSize, 0);
 		
 		
 		// Simulation
-        constForce.apply(particleManager);
-
-        repulsiveForce.apply(particleManager);
+        //~ constForce.apply(particleManager);
+		universalForce.setDt(dt);
+        universalForce.apply(particleManager);
         
-        brakeForce.setDt(dt);
-        brakeForce.apply(particleManager);
+        //~ brakeForce.setDt(dt);
+        //~ brakeForce.apply(particleManager);
 
 		//~ for(int i = 0; i < polysAndForces.size(); ++i){
 			//~ polysAndForces[i].first.draw(renderer);
@@ -375,29 +382,30 @@ int main() {
 						link = !link;
 					}
 					
-					float actualInf = repulsiveForce.m_fLInf;
-					float actualSup = repulsiveForce.m_fLSup;
+					float actualInf = universalForce.m_fLInf;
+					float actualSup = universalForce.m_fLSup;
 					
-					imguiSlider("Repulsive KRep", &repulsiveForce.m_fKRep, 0.f, 2.f, 0.001f);
-					imguiSlider("Repulsive KSticky", &repulsiveForce.m_fKSticky, 0.f, 2.f, 0.001f);
-					imguiSlider("Repulsive LInf", &repulsiveForce.m_fLInf, 0.f, 0.5f, 0.001f);
-					imguiSlider("Repulsive LSup", &repulsiveForce.m_fLSup, 0.f, 0.5f, 0.001f);
+					imguiSlider("Repulsive KRep", &universalForce.m_fKRep, 0.f, 2.f, 0.001f);
+					imguiSlider("Repulsive KSticky", &universalForce.m_fKSticky, 0.f, 2.f, 0.001f);
+					imguiSlider("Repulsive LInf", &universalForce.m_fLInf, 0.f, 0.5f, 0.001f);
+					imguiSlider("Repulsive LSup", &universalForce.m_fLSup, 0.f, 0.5f, 0.001f);
+					imguiSlider("Constant L", &universalForce.m_fConstL, 0.f, 2.f, 0.001f);
 					
-					float dInf = repulsiveForce.m_fLInf - actualInf;
-					float dSup = repulsiveForce.m_fLSup - actualSup;
+					float dInf = universalForce.m_fLInf - actualInf;
+					float dSup = universalForce.m_fLSup - actualSup;
 					
 					if(link == true){
-						repulsiveForce.m_fLInf += dSup;
-						repulsiveForce.m_fLSup += dInf;
+						universalForce.m_fLInf += dSup;
+						universalForce.m_fLSup += dInf;
 					}
 				}
 				
 				if(brakeIHM == false){
 					imguiLabel("Brake Force");
 					
-					imguiSlider("Brake V", &brakeForce.m_fV, 0.f, 1.f, 0.001f);
-					imguiSlider("Brake L", &brakeForce.m_fL, 0.f, 0.8f, 0.001f);
-					imguiSlider("Brake Amort", &brakeForce.m_fAmort, 0.0f, 0.01f, 0.0001f);
+					imguiSlider("Brake V", &universalForce.m_fBrakeV, 0.f, 1.f, 0.001f);
+					imguiSlider("Brake L", &universalForce.m_fBrakeL, 0.f, 0.8f, 0.001f);
+					imguiSlider("Brake Amort", &universalForce.m_fBrakeAmort, 0.0f, 0.01f, 0.0001f);
 				}
 				
 				if(postIHM == false){
@@ -538,14 +546,14 @@ int main() {
 								config.open ("config.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
 								if (config.is_open())
 								{
-									config << constForce.m_force.y << "\n";
-									config << repulsiveForce.m_fKRep << "\n";
-									config << repulsiveForce.m_fKSticky << "\n";
-									config << repulsiveForce.m_fLInf << "\n";
-									config << repulsiveForce.m_fLSup << "\n";
-									config << brakeForce.m_fV << "\n";
-									config << brakeForce.m_fL << "\n";
-									config << brakeForce.m_fAmort << "\n";
+									config << universalForce.m_fConstL << "\n";
+									config << universalForce.m_fKRep << "\n";
+									config << universalForce.m_fKSticky << "\n";
+									config << universalForce.m_fLInf << "\n";
+									config << universalForce.m_fLSup << "\n";
+									config << universalForce.m_fBrakeV << "\n";
+									config << universalForce.m_fBrakeL << "\n";
+									config << universalForce.m_fBrakeAmort << "\n";
 									std::cout << "Config written \n";
 								} else {
 									std::cout << "Unable to open config \n";
@@ -563,28 +571,28 @@ int main() {
 								std::cout << "Config is open \n";
 								getline (config,value);		
 								std::istringstream(value) >> f; 
-								constForce.m_force.y = f;
+								universalForce.m_fConstL = f;
 								getline (config,value);		
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fKRep = f;
+								universalForce.m_fKRep = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fKSticky = f;
+								universalForce.m_fKSticky = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fLInf = f;
+								universalForce.m_fLInf = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fLSup = f;
+								universalForce.m_fLSup = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								brakeForce.m_fV = f;
+								universalForce.m_fBrakeV = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								brakeForce.m_fL = f;
+								universalForce.m_fBrakeL = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								brakeForce.m_fAmort = f;
+								universalForce.m_fBrakeAmort = f;
 								std::cout << "Config loaded \n";
 								config.close();
 							}
