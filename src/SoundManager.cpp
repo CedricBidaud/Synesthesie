@@ -28,11 +28,13 @@ void SoundManager::PrintInterfaces(){
 }
 
 
-void SoundManager::Init(){
+void SoundManager::Init(int size){
 
     //int input, output;
  
     //FMOD_SYSTEM *system;
+    
+    spectrumSize=size;
  
     FMOD_System_Create(&system);
     FMOD_System_Init(system, 2, FMOD_INIT_NORMAL, 0);
@@ -82,7 +84,7 @@ void SoundManager::Init(){
 }
 
 void SoundManager::GetSpectrum(float* spectrum){
-	FMOD_Channel_GetSpectrum(channel, spectrum, 4096, 0, FMOD_DSP_FFT_WINDOW_BLACKMANHARRIS);	
+	FMOD_Channel_GetSpectrum(channel, spectrum, spectrumSize, 0, FMOD_DSP_FFT_WINDOW_BLACKMANHARRIS);	
 }
 
 float SoundManager::GetMaxFrequency(float* spectrum, int lowBound, int highBound){
@@ -90,7 +92,7 @@ float SoundManager::GetMaxFrequency(float* spectrum, int lowBound, int highBound
 	lowBound=ToIndex(lowBound);
 	if (lowBound<0) {lowBound=0;}
 	highBound=ToIndex(highBound);
-	if (highBound>4096) {highBound=4096;}
+	if (highBound>spectrumSize) {highBound=spectrumSize;}
 	
 	float maxFreq=spectrum[lowBound];
 	int maxI=lowBound;
@@ -114,7 +116,7 @@ float SoundManager::GetRelMaxFrequency(float* spectrum, int lowBound, int highBo
 	lowBound=ToIndex(lowBound);
 	if (lowBound<0) {lowBound=0;}
 	highBound=ToIndex(highBound);
-	if (highBound>4096) {highBound=4096;}
+	if (highBound>spectrumSize) {highBound=spectrumSize;}
 	
 	float maxFreq=spectrum[lowBound];
 	int maxI=lowBound;
@@ -135,12 +137,32 @@ float SoundManager::GetRelMaxFrequency(float* spectrum){
 	return GetRelMaxFrequency(spectrum, 0, 22050);
 }
 
+float SoundManager::GetVolume(float* spectrum, int lowBound, int highBound){
+	
+	lowBound=ToIndex(lowBound);
+	if (lowBound<0) {lowBound=0;}
+	highBound=ToIndex(highBound);
+	if (highBound>spectrumSize) {highBound=spectrumSize;}
+	
+	float total=0;
+	
+	for (int i=lowBound; i<highBound; i++){
+		total+=spectrum[i];
+	}
+	
+	return total;	
+}
+
+float SoundManager::GetVolume(float* spectrum){
+	return GetVolume(spectrum, 0, spectrumSize);
+}
+
 int SoundManager::ToIndex(int frequency){
-	return (int)frequency*4096/22050;
+	return (int)frequency*spectrumSize/22050;
 }
 
 int SoundManager::ToFrequency(int index){
-	return (int)index*22050/4096;
+	return (int)index*spectrumSize/4096;
 }
 
 void SoundManager::Update(){

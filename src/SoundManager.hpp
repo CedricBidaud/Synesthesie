@@ -9,15 +9,20 @@ class SoundManager{
 	public:
 		SoundManager();
 		void PrintInterfaces();
-		void Init();
+		void Init(int);
 		void GetSpectrum(float*);
 		float GetMaxFrequency(float*, int, int); // Get the value of the maximal frequency between to bounds (Hz)
 		float GetRelMaxFrequency(float*, int, int); // Get the relative position (between 0 and 1) of the highest value frequency between a min and max bounds
 		float GetMaxFrequency(float*); // Default values : 0Hz > 22050Hz
 		float GetRelMaxFrequency(float*); // Default values : 0Hz > 22050Hz
+		float GetVolume(float*, int, int);
+		float GetVolume(float*);
+		
+		void Update();
+		
 		int ToIndex(int); // Translate a sound frequency into the corresponding spectrum index
 		int ToFrequency(int); // Translate a spectrum index into the corresponding frequency
-		void Update();
+		
 		~SoundManager();
 		
 		
@@ -25,6 +30,7 @@ class SoundManager{
 		FMOD_SYSTEM *system;
 		FMOD_CHANNEL *channel;
 		int input, output;
+		int spectrumSize;
 		
 };
 

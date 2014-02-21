@@ -54,9 +54,11 @@ int main() {
 	// SOUND
 	// ----
 	
+	int spectrumSize=4096; // Higher means more frequency precision
+	
 	SoundManager soundManager;
-	soundManager.Init();
-	float spectrum[4096];
+	soundManager.Init(spectrumSize);
+	float spectrum[spectrumSize];
 
 	
 
@@ -300,7 +302,8 @@ int main() {
         
         soundManager.GetSpectrum(spectrum);
         //std::cout << soundManager.GetRelMaxFrequency(spectrum, 0, 1500) << std::endl;
-		repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
+		//repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
+		repulsiveForce.m_fLInf = 0.01+0.2*soundManager.GetVolume(spectrum);
 		//std::cout << repulsiveForce.m_fLInf << std::endl;
 		soundManager.Update();
         
