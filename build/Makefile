@@ -268,54 +268,6 @@ src/ParticleManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.s
 .PHONY : src/ParticleManager.cpp.s
 
-src/Polygon.o: src/Polygon.cpp.o
-.PHONY : src/Polygon.o
-
-# target to build an object file
-src/Polygon.cpp.o:
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o
-.PHONY : src/Polygon.cpp.o
-
-src/Polygon.i: src/Polygon.cpp.i
-.PHONY : src/Polygon.i
-
-# target to preprocess a source file
-src/Polygon.cpp.i:
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.i
-.PHONY : src/Polygon.cpp.i
-
-src/Polygon.s: src/Polygon.cpp.s
-.PHONY : src/Polygon.s
-
-# target to generate assembly for a file
-src/Polygon.cpp.s:
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.s
-.PHONY : src/Polygon.cpp.s
-
-src/PolygonForce.o: src/PolygonForce.cpp.o
-.PHONY : src/PolygonForce.o
-
-# target to build an object file
-src/PolygonForce.cpp.o:
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o
-.PHONY : src/PolygonForce.cpp.o
-
-src/PolygonForce.i: src/PolygonForce.cpp.i
-.PHONY : src/PolygonForce.i
-
-# target to preprocess a source file
-src/PolygonForce.cpp.i:
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.i
-.PHONY : src/PolygonForce.cpp.i
-
-src/PolygonForce.s: src/PolygonForce.cpp.s
-.PHONY : src/PolygonForce.s
-
-# target to generate assembly for a file
-src/PolygonForce.cpp.s:
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.s
-.PHONY : src/PolygonForce.cpp.s
-
 src/RepulsiveForce.o: src/RepulsiveForce.cpp.o
 .PHONY : src/RepulsiveForce.o
 
@@ -339,6 +291,30 @@ src/RepulsiveForce.s: src/RepulsiveForce.cpp.s
 src/RepulsiveForce.cpp.s:
 	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/RepulsiveForce.cpp.s
 .PHONY : src/RepulsiveForce.cpp.s
+
+src/SoundManager.o: src/SoundManager.cpp.o
+.PHONY : src/SoundManager.o
+
+# target to build an object file
+src/SoundManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o
+.PHONY : src/SoundManager.cpp.o
+
+src/SoundManager.i: src/SoundManager.cpp.i
+.PHONY : src/SoundManager.i
+
+# target to preprocess a source file
+src/SoundManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.i
+.PHONY : src/SoundManager.cpp.i
+
+src/SoundManager.s: src/SoundManager.cpp.s
+.PHONY : src/SoundManager.s
+
+# target to generate assembly for a file
+src/SoundManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.s
+.PHONY : src/SoundManager.cpp.s
 
 src/StickyForce.o: src/StickyForce.cpp.o
 .PHONY : src/StickyForce.o
@@ -560,15 +536,12 @@ help:
 	@echo "... src/ParticleManager.o"
 	@echo "... src/ParticleManager.i"
 	@echo "... src/ParticleManager.s"
-	@echo "... src/Polygon.o"
-	@echo "... src/Polygon.i"
-	@echo "... src/Polygon.s"
-	@echo "... src/PolygonForce.o"
-	@echo "... src/PolygonForce.i"
-	@echo "... src/PolygonForce.s"
 	@echo "... src/RepulsiveForce.o"
 	@echo "... src/RepulsiveForce.i"
 	@echo "... src/RepulsiveForce.s"
+	@echo "... src/SoundManager.o"
+	@echo "... src/SoundManager.i"
+	@echo "... src/SoundManager.s"
 	@echo "... src/StickyForce.o"
 	@echo "... src/StickyForce.i"
 	@echo "... src/StickyForce.s"

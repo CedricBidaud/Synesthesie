@@ -10,9 +10,8 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/HookForce.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/HookForce.cpp.o"
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o"
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o"
-  "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Polygon.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o"
-  "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/PolygonForce.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o"
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/RepulsiveForce.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/RepulsiveForce.cpp.o"
+  "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/SoundManager.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o"
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/StickyForce.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o"
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o"
   "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imgui.cpp" "/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles/Synesthésie.dir/src/imgui.cpp.o"
@@ -40,6 +39,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../third-party/glm-0.9.4.6"
   "../third-party/glew-1.10.0/include"
   "../third-party/my_imgui"
+  "/usr/include/FMOD"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

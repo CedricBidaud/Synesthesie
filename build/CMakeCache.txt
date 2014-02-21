@@ -116,7 +116,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Imac3-MoteursPhysiques-PartyKel
+CMAKE_PROJECT_NAME:STATIC=Imac3-Synesthésie
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -156,10 +156,10 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Imac3-MoteursPhysiques-PartyKel_BINARY_DIR:STATIC=/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build
+Imac3-Synesthésie_BINARY_DIR:STATIC=/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build
 
 //Value Computed by CMake
-Imac3-MoteursPhysiques-PartyKel_SOURCE_DIR:STATIC=/home/cedric/Bureau/Synesthesie/GIT/Synesthesie
+Imac3-Synesthésie_SOURCE_DIR:STATIC=/home/cedric/Bureau/Synesthesie/GIT/Synesthesie
 
 //Path to a file.
 OPENGL_INCLUDE_DIR:PATH=/usr/include
@@ -528,7 +528,7 @@ OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL.so;/usr/lib/x86_64-linux-gnu/libSDLmain.a;-lpthread;-lpthread
+SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL.so;/usr/lib/x86_64-linux-gnu/libSDLmain.a;-lpthread
 //ADVANCED property for variable: X11_ICE_INCLUDE_PATH
 X11_ICE_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_LIB

@@ -141,32 +141,9 @@ CMakeFiles/Synesthésie.dir/src/imgui.cpp.o.provides: CMakeFiles/Synesthésie.di
 
 CMakeFiles/Synesthésie.dir/src/imgui.cpp.o.provides.build: CMakeFiles/Synesthésie.dir/src/imgui.cpp.o
 
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o: ../src/Polygon.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Polygon.cpp
-
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Synesthésie.dir/src/Polygon.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Polygon.cpp > CMakeFiles/Synesthésie.dir/src/Polygon.cpp.i
-
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Synesthésie.dir/src/Polygon.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Polygon.cpp -o CMakeFiles/Synesthésie.dir/src/Polygon.cpp.s
-
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.requires:
-.PHONY : CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.requires
-
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.provides: CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.provides.build
-.PHONY : CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.provides
-
-CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.provides.build: CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o
-
 CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o: ../src/UniversalForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.cpp
 
@@ -186,6 +163,29 @@ CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o.provides: CMakeFiles/Synest
 .PHONY : CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o.provides
 
 CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o.provides.build: CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o
+
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o: ../src/SoundManager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/SoundManager.cpp
+
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/SoundManager.cpp > CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.i
+
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/SoundManager.cpp -o CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.s
+
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.requires:
+.PHONY : CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.requires
+
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.provides: CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.provides.build
+.PHONY : CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.provides
+
+CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.provides.build: CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o
 
 CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o: ../src/ParticleManager.cpp
@@ -210,32 +210,9 @@ CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o.provides: CMakeFiles/Synes
 
 CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o.provides.build: CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o
 
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o: ../src/PolygonForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/PolygonForce.cpp
-
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/PolygonForce.cpp > CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.i
-
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/PolygonForce.cpp -o CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.s
-
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.requires:
-.PHONY : CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.requires
-
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.provides: CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Synesthésie.dir/build.make CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.provides.build
-.PHONY : CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.provides
-
-CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.provides.build: CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o
-
 CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o: ../src/StickyForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/StickyForce.cpp
 
@@ -258,7 +235,7 @@ CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o.provides.build: CMakeFiles/Syn
 
 CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o: ../src/renderer/WindowManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.cpp
 
@@ -281,7 +258,7 @@ CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o.provides.build: CMa
 
 CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o: ../src/renderer/ParticleRenderer2D.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/ParticleRenderer2D.cpp
 
@@ -304,7 +281,7 @@ CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o.provides.build
 
 CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o: ../src/renderer/GLtools.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/GLtools.cpp
 
@@ -327,7 +304,7 @@ CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.o: ../src/imguiRenderGL.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imguiRenderGL.cpp
 
@@ -350,7 +327,7 @@ CMakeFiles/Synesthésie.dir/src/imguiRenderGL.cpp.o.provides.build: CMakeFiles/S
 
 CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.o: ../src/BrakeForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/BrakeForce.cpp
 
@@ -373,7 +350,7 @@ CMakeFiles/Synesthésie.dir/src/BrakeForce.cpp.o.provides.build: CMakeFiles/Syne
 
 CMakeFiles/Synesthésie.dir/src/main.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/main.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/main.cpp
 
@@ -396,7 +373,7 @@ CMakeFiles/Synesthésie.dir/src/main.cpp.o.provides.build: CMakeFiles/Synesthés
 
 CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o: ../src/Leapfrog.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.cpp
 
@@ -419,7 +396,7 @@ CMakeFiles/Synesthésie.dir/src/Leapfrog.cpp.o.provides.build: CMakeFiles/Synest
 
 CMakeFiles/Synesthésie.dir/src/HookForce.cpp.o: CMakeFiles/Synesthésie.dir/flags.make
 CMakeFiles/Synesthésie.dir/src/HookForce.cpp.o: ../src/HookForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Synesthésie.dir/src/HookForce.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Synesthésie.dir/src/HookForce.cpp.o -c /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/HookForce.cpp
 
@@ -446,10 +423,9 @@ Synesthésie_OBJECTS = \
 "CMakeFiles/Synesthésie.dir/src/ConstantForce.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/Force.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/imgui.cpp.o" \
-"CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o" \
+"CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o" \
-"CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o" \
 "CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o" \
@@ -467,10 +443,9 @@ Synesthésie: CMakeFiles/Synesthésie.dir/src/RepulsiveForce.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/ConstantForce.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/Force.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/imgui.cpp.o
-Synesthésie: CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o
+Synesthésie: CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o
-Synesthésie: CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o
 Synesthésie: CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o
@@ -502,10 +477,9 @@ CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/RepulsiveF
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/ConstantForce.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/Force.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/imgui.cpp.o.requires
-CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/Polygon.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/UniversalForce.cpp.o.requires
+CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/SoundManager.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/ParticleManager.cpp.o.requires
-CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/PolygonForce.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/StickyForce.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/renderer/WindowManager.cpp.o.requires
 CMakeFiles/Synesthésie.dir/requires: CMakeFiles/Synesthésie.dir/src/renderer/ParticleRenderer2D.cpp.o.requires

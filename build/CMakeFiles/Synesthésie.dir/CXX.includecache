@@ -480,6 +480,10 @@ iostream
 renderer/ParticleRenderer2D.hpp
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/ParticleRenderer2D.hpp
 
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/SoundManager.hpp
+FMOD/fmod.h
+-
+
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
 iostream
 -
@@ -513,6 +517,8 @@ Leapfrog.hpp
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.hpp
 UniversalForce.hpp
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
+SoundManager.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/SoundManager.hpp
 imgui.h
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imgui.h
 imguiRenderGL.h
@@ -522,16 +528,6 @@ imguiRenderGL.h
 GL/glew.h
 -
 glm/glm.hpp
--
-
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.cpp
-WindowManager.hpp
-/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.hpp
-GL/glew.h
--
-iostream
--
-stdexcept
 -
 
 /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.hpp

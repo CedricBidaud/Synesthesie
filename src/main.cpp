@@ -16,13 +16,15 @@
 
 #include "UniversalForce.hpp"
 
+#include "SoundManager.hpp"
+
 #include "imgui.h"
 #include "imguiRenderGL.h"
 
-static const Uint32 WINDOW_WIDTH = 800;
-static const Uint32 WINDOW_HEIGHT = 600;
-static const Uint32 TEXTURE_WIDTH = 800;
-static const Uint32 TEXTURE_HEIGHT = 600;
+static const Uint32 WINDOW_WIDTH = 1024;
+static const Uint32 WINDOW_HEIGHT = 1024;
+static const Uint32 TEXTURE_WIDTH = 1024;
+static const Uint32 TEXTURE_HEIGHT = 1024;
 
 using namespace imac3;
 
@@ -43,8 +45,22 @@ int destroy_shader(ShaderGLSL & shader);
 
 int main() {
 	
+
     WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Synesthésie");
+
     wm.setFramerate(30);
+
+	// ----
+	// SOUND
+	// ----
+	
+	int spectrumSize=4096; // Higher means more frequency precision
+	
+	SoundManager soundManager;
+	soundManager.Init(spectrumSize);
+	float spectrum[spectrumSize];
+
+	
 
 	// ----
 	// SHADERS
@@ -119,7 +135,7 @@ int main() {
 	}
 	
 	bool ihm = true;
-	bool ihmForTom = true;
+	bool ihmForTom = false;
     
     bool is_lClicPressed = false;
     
@@ -243,6 +259,13 @@ int main() {
 
         // Rendu
         renderer.clear();
+        
+        soundManager.GetSpectrum(spectrum);
+        //std::cout << soundManager.GetRelMaxFrequency(spectrum, 0, 1500) << std::endl;
+		//repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
+		universalForce.m_fLInf = 0.01+0.2*soundManager.GetVolume(spectrum);
+		//std::cout << repulsiveForce.m_fLInf << std::endl;
+		soundManager.Update();
         
         if(open){
 			particleManager.addRandomParticles(1);
