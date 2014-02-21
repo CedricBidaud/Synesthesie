@@ -19,10 +19,10 @@
 #include "imgui.h"
 #include "imguiRenderGL.h"
 
-static const Uint32 WINDOW_WIDTH = 1024;
-static const Uint32 WINDOW_HEIGHT = 1024;
-static const Uint32 TEXTURE_WIDTH = 1024;
-static const Uint32 TEXTURE_HEIGHT = 1024;
+static const Uint32 WINDOW_WIDTH = 800;
+static const Uint32 WINDOW_HEIGHT = 600;
+static const Uint32 TEXTURE_WIDTH = 800;
+static const Uint32 TEXTURE_HEIGHT = 600;
 
 using namespace imac3;
 
