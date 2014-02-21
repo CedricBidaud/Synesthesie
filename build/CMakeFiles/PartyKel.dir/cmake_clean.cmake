@@ -9,6 +9,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/PartyKel.dir/src/main.cpp.o"
   "CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.o"
   "CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o"
+  "CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o"
   "CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o"
   "CMakeFiles/PartyKel.dir/src/Force.cpp.o"
   "CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o"

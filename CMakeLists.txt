@@ -28,5 +28,7 @@ set(CMAKE_CXX_FLAGS "-std=c++0x")
 # Our application
 file(GLOB_RECURSE SRC_FILES src/*.cpp src/*.hpp)
 
+
 add_executable(PartyKel ${SRC_FILES})
 target_link_libraries(PartyKel glew ${OPENGL_LIBRARIES} ${SDL_LIBRARY} libfmodex64.so)
+

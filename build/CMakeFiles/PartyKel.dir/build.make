@@ -276,9 +276,32 @@ CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o.provides: CMakeFiles/PartyKel.dir/s
 
 CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o.provides.build: CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o
 
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o: CMakeFiles/PartyKel.dir/flags.make
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o: ../src/UniversalForce.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o -c /home/tom/Documents/Synesthesie/src/UniversalForce.cpp
+
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tom/Documents/Synesthesie/src/UniversalForce.cpp > CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.i
+
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tom/Documents/Synesthesie/src/UniversalForce.cpp -o CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.s
+
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.requires:
+.PHONY : CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.requires
+
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.provides: CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PartyKel.dir/build.make CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.provides.build
+.PHONY : CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.provides
+
+CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.provides.build: CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o
+
 CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o: CMakeFiles/PartyKel.dir/flags.make
 CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o: ../src/StickyForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o -c /home/tom/Documents/Synesthesie/src/StickyForce.cpp
 
@@ -301,7 +324,7 @@ CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o.provides.build: CMakeFiles/PartyKe
 
 CMakeFiles/PartyKel.dir/src/Force.cpp.o: CMakeFiles/PartyKel.dir/flags.make
 CMakeFiles/PartyKel.dir/src/Force.cpp.o: ../src/Force.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PartyKel.dir/src/Force.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PartyKel.dir/src/Force.cpp.o -c /home/tom/Documents/Synesthesie/src/Force.cpp
 
@@ -324,7 +347,7 @@ CMakeFiles/PartyKel.dir/src/Force.cpp.o.provides.build: CMakeFiles/PartyKel.dir/
 
 CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o: CMakeFiles/PartyKel.dir/flags.make
 CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o: ../src/RepulsiveForce.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o -c /home/tom/Documents/Synesthesie/src/RepulsiveForce.cpp
 
@@ -347,7 +370,7 @@ CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o.provides.build: CMakeFiles/Part
 
 CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.o: CMakeFiles/PartyKel.dir/flags.make
 CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.o: ../src/Leapfrog.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.o -c /home/tom/Documents/Synesthesie/src/Leapfrog.cpp
 
@@ -370,7 +393,7 @@ CMakeFiles/PartyKel.dir/src/Leapfrog.cpp.o.provides.build: CMakeFiles/PartyKel.d
 
 CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.o: CMakeFiles/PartyKel.dir/flags.make
 CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.o: ../src/ParticleManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tom/Documents/Synesthesie/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PartyKel.dir/src/ParticleManager.cpp.o -c /home/tom/Documents/Synesthesie/src/ParticleManager.cpp
 
@@ -403,6 +426,7 @@ PartyKel_OBJECTS = \
 "CMakeFiles/PartyKel.dir/src/main.cpp.o" \
 "CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.o" \
 "CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o" \
+"CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o" \
 "CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o" \
 "CMakeFiles/PartyKel.dir/src/Force.cpp.o" \
 "CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o" \
@@ -422,6 +446,7 @@ PartyKel: CMakeFiles/PartyKel.dir/src/imgui.cpp.o
 PartyKel: CMakeFiles/PartyKel.dir/src/main.cpp.o
 PartyKel: CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.o
 PartyKel: CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o
+PartyKel: CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o
 PartyKel: CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o
 PartyKel: CMakeFiles/PartyKel.dir/src/Force.cpp.o
 PartyKel: CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o
@@ -455,6 +480,7 @@ CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/imgui.cpp.o.requir
 CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/main.cpp.o.requires
 CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/imguiRenderGL.cpp.o.requires
 CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/BrakeForce.cpp.o.requires
+CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/UniversalForce.cpp.o.requires
 CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/StickyForce.cpp.o.requires
 CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/Force.cpp.o.requires
 CMakeFiles/PartyKel.dir/requires: CMakeFiles/PartyKel.dir/src/RepulsiveForce.cpp.o.requires

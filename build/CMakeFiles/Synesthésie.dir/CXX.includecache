@@ -516,7 +516,59 @@ iostream
 Force.hpp
 /home/tom/Documents/Synesthesie/src/Force.hpp
 
+<<<<<<< HEAD:build/CMakeFiles/PartyKel.dir/CXX.includecache
 /home/tom/Documents/Synesthesie/src/main.cpp
+=======
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/StickyForce.cpp
+cmath
+-
+StickyForce.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/StickyForce.hpp
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/StickyForce.hpp
+iostream
+-
+Force.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Force.hpp
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.cpp
+cmath
+-
+UniversalForce.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
+iostream
+-
+Force.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Force.hpp
+Leapfrog.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.hpp
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imgui.cpp
+stdio.h
+-
+string.h
+-
+math.h
+-
+imgui.h
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imgui.h
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imguiRenderGL.cpp
+math.h
+-
+stdio.h
+-
+imgui.h
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/imgui.h
+GLCommon.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/GLCommon.hpp
+stb_truetype.h
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/stb_truetype.h
+
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/main.cpp
+>>>>>>> 742206bc3d070e846f7f5688c07e83d2e83a3e65:build/CMakeFiles/Synesthésie.dir/CXX.includecache
 iostream
 -
 fstream
@@ -536,6 +588,7 @@ renderer/ParticleRenderer2D.hpp
 vector
 -
 ParticleManager.hpp
+<<<<<<< HEAD:build/CMakeFiles/PartyKel.dir/CXX.includecache
 /home/tom/Documents/Synesthesie/src/ParticleManager.hpp
 ConstantForce.hpp
 /home/tom/Documents/Synesthesie/src/ConstantForce.hpp
@@ -551,6 +604,13 @@ BrakeForce.hpp
 /home/tom/Documents/Synesthesie/src/BrakeForce.hpp
 SoundManager.hpp
 /home/tom/Documents/Synesthesie/src/SoundManager.hpp
+=======
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/ParticleManager.hpp
+Leapfrog.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/Leapfrog.hpp
+UniversalForce.hpp
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/UniversalForce.hpp
+>>>>>>> 742206bc3d070e846f7f5688c07e83d2e83a3e65:build/CMakeFiles/Synesthésie.dir/CXX.includecache
 imgui.h
 /home/tom/Documents/Synesthesie/src/imgui.h
 imguiRenderGL.h

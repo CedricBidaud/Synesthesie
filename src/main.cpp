@@ -12,13 +12,9 @@
 #include <vector>
 
 #include "ParticleManager.hpp"
-#include "ConstantForce.hpp"
 #include "Leapfrog.hpp"
 
-#include "HookForce.hpp"
-#include "RepulsiveForce.hpp"
-#include "StickyForce.hpp"
-#include "BrakeForce.hpp"
+#include "UniversalForce.hpp"
 
 #include "SoundManager.hpp"
 
@@ -27,6 +23,8 @@
 
 static const Uint32 WINDOW_WIDTH = 1024;
 static const Uint32 WINDOW_HEIGHT = 1024;
+static const Uint32 TEXTURE_WIDTH = 1024;
+static const Uint32 TEXTURE_HEIGHT = 1024;
 
 using namespace imac3;
 
@@ -47,7 +45,9 @@ int destroy_shader(ShaderGLSL & shader);
 
 int main() {
 	
-    WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Synesthesie");
+
+    WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Synesthésie");
+
     wm.setFramerate(30);
 
 	// ----
@@ -104,55 +104,14 @@ int main() {
 
     // Création des particules
     ParticleManager particleManager;
-    particleManager.addRandomParticles(1);
+    //~ particleManager.addRandomParticles(1);
 
 	Leapfrog leapfrog;
+    
+    // UniversalForce			 (const Leapfrog& solver, float fKRep, float fKSticky, float fLInf, float fLSup, float fConstK, float fConstL, float dt, float brakeV, float brakeL){
+    UniversalForce universalForce(leapfrog, 			  0.191f, 		0.0f, 			0.145, 		0.159, 		 0.2, 			0.2,			0.0f,	 0.011,			0.159);   
+    
 
-	ConstantForce constForce(0.2,0.2);
-
-    // hookForce(K,L)
-    float L = 0.05f;
-    HookForce hookForce(0.2f, 0.15f);
-    //~ RepulsiveForce(float fKRep, float fKSticky, float fLInf, float fLSup);
-    RepulsiveForce repulsiveForce(0.191f, 0.282f, 0.145, 0.159);
-    
-    //~ BrakeForce(float dt, float v, float l, const Leapfrog& solver);
-    BrakeForce brakeForce(0.0f, 0.011, 0.159, leapfrog);
-	
-	
-	// ----- Boxes -----
-	//~ static Polygon 		buildBox(glm::vec3 color, 		 glm::vec2 position,  float width, float height, float rotationInDegrees);
-	//~ Polygon box1 = Polygon::buildBox(glm::vec3(0.9,0.8,0.3), glm::vec2(-0.38,-0.2), 0.25, 		   0.12, 		 -78.0f);
-	//~ Polygon box2 = Polygon::buildBox(glm::vec3(0.2,0.2,0.9), glm::vec2(0.1,0.5), 0.05, 		   0.47, 		 30.0f);
-    //~ 
-    //~ Polygon boxL = Polygon::buildBox(glm::vec3(1.0), glm::vec2(-1.0,0.0),0.1,2.0,false);
-    //~ Polygon boxR = Polygon::buildBox(glm::vec3(1.0), glm::vec2(1.0,0.0),0.1,2.0,false);
-    //~ Polygon boxT = Polygon::buildBox(glm::vec3(1.0), glm::vec2(0.0,1.0),2.0,0.1,false);
-    //~ Polygon boxB = Polygon::buildBox(glm::vec3(1.0), glm::vec2(0.0,-1.0),2.0,0.1,false);
-    
-    
-    // ----- Forces de répulsion des boxes -----
-    float polyStickyCoef = 1.005f;
-	
-	//~ PolygonForce box1PolyForce(box1, polyStickyCoef, leapfrog);
-	//~ PolygonForce box2PolyForce(box2, polyStickyCoef, leapfrog);
-	//~ 
-	//~ PolygonForce boxLPolyForce(boxL, polyStickyCoef, leapfrog);
-	//~ PolygonForce boxRPolyForce(boxR, polyStickyCoef, leapfrog);
-	//~ PolygonForce boxTPolyForce(boxT, polyStickyCoef, leapfrog);
-	//~ PolygonForce boxBPolyForce(boxB, polyStickyCoef, leapfrog);
-	
-	// ----- Ajout des boxes et de leurs forces à un vecteur -----
-	// => rendu et application des forces dans la même passe
-	//~ std::vector<std::pair<Polygon, PolygonForce>> polysAndForces;
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(box1, box1PolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(box2, box2PolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxL, boxLPolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxR, boxRPolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxT, boxTPolyForce));
-    //~ polysAndForces.push_back(std::pair<Polygon, PolygonForce>(boxB, boxBPolyForce));
-    
-    //
     glm::vec2 click;
     
 	
@@ -273,7 +232,8 @@ int main() {
 	glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 		glBindTexture(GL_TEXTURE_2D, texColorBuffer);
 			glTexImage2D(
-				GL_TEXTURE_2D, 0, GL_RGB, WINDOW_WIDTH, WINDOW_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
+				//~ GL_TEXTURE_2D, 0, GL_RGB, WINDOW_WIDTH, WINDOW_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
+				GL_TEXTURE_2D, 0, GL_RGB, TEXTURE_WIDTH, TEXTURE_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
 			);
 			
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -303,7 +263,7 @@ int main() {
         soundManager.GetSpectrum(spectrum);
         //std::cout << soundManager.GetRelMaxFrequency(spectrum, 0, 1500) << std::endl;
 		//repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
-		repulsiveForce.m_fLInf = 0.01+0.2*soundManager.GetVolume(spectrum);
+		universalForce.m_fLInf = 0.01+0.2*soundManager.GetVolume(spectrum);
 		//std::cout << repulsiveForce.m_fLInf << std::endl;
 		soundManager.Update();
         
@@ -311,30 +271,22 @@ int main() {
 			particleManager.addRandomParticles(1);
 		}
 		
+		glViewport(0,0,TEXTURE_WIDTH,TEXTURE_HEIGHT);
 		// Écriture de l'image dans le framebuffer
 		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 			glClear(GL_COLOR_BUFFER_BIT);
 			particleManager.drawParticles(renderer, particleSize);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		
-		
+		glViewport(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
 		// Affichage de la texture (passage dans le shader pour blur et seuillage)
 		renderer.drawQuad(vao, texColorBuffer, quadTriangleCount, blurSize, 0);
 		
 		
 		// Simulation
-        constForce.apply(particleManager);
+		universalForce.setDt(dt);
+        universalForce.apply(particleManager);
 
-        repulsiveForce.apply(particleManager);
-        
-        brakeForce.setDt(dt);
-        brakeForce.apply(particleManager);
-
-		//~ for(int i = 0; i < polysAndForces.size(); ++i){
-			//~ polysAndForces[i].first.draw(renderer);
-			//~ polysAndForces[i].second.setDt(dt);
-			//~ polysAndForces[i].second.apply(particleManager);
-		//~ }
         
         leapfrog.solve(particleManager, dt);
         
@@ -395,29 +347,30 @@ int main() {
 						link = !link;
 					}
 					
-					float actualInf = repulsiveForce.m_fLInf;
-					float actualSup = repulsiveForce.m_fLSup;
+					float actualInf = universalForce.m_fLInf;
+					float actualSup = universalForce.m_fLSup;
 					
-					imguiSlider("Repulsive KRep", &repulsiveForce.m_fKRep, 0.f, 2.f, 0.001f);
-					imguiSlider("Repulsive KSticky", &repulsiveForce.m_fKSticky, 0.f, 2.f, 0.001f);
-					imguiSlider("Repulsive LInf", &repulsiveForce.m_fLInf, 0.f, 0.5f, 0.001f);
-					imguiSlider("Repulsive LSup", &repulsiveForce.m_fLSup, 0.f, 0.5f, 0.001f);
+					imguiSlider("Repulsive KRep", &universalForce.m_fKRep, 0.f, 2.f, 0.001f);
+					imguiSlider("Repulsive KSticky", &universalForce.m_fKSticky, 0.f, 2.f, 0.001f);
+					imguiSlider("Repulsive LInf", &universalForce.m_fLInf, 0.f, 0.5f, 0.001f);
+					imguiSlider("Repulsive LSup", &universalForce.m_fLSup, 0.f, 0.5f, 0.001f);
+					imguiSlider("Constant L", &universalForce.m_fConstL, 0.f, 2.f, 0.001f);
 					
-					float dInf = repulsiveForce.m_fLInf - actualInf;
-					float dSup = repulsiveForce.m_fLSup - actualSup;
+					float dInf = universalForce.m_fLInf - actualInf;
+					float dSup = universalForce.m_fLSup - actualSup;
 					
 					if(link == true){
-						repulsiveForce.m_fLInf += dSup;
-						repulsiveForce.m_fLSup += dInf;
+						universalForce.m_fLInf += dSup;
+						universalForce.m_fLSup += dInf;
 					}
 				}
 				
 				if(brakeIHM == false){
 					imguiLabel("Brake Force");
 					
-					imguiSlider("Brake V", &brakeForce.m_fV, 0.f, 1.f, 0.001f);
-					imguiSlider("Brake L", &brakeForce.m_fL, 0.f, 0.8f, 0.001f);
-					imguiSlider("Brake Amort", &brakeForce.m_fAmort, 0.0f, 0.01f, 0.0001f);
+					imguiSlider("Brake V", &universalForce.m_fBrakeV, 0.f, 1.f, 0.001f);
+					imguiSlider("Brake L", &universalForce.m_fBrakeL, 0.f, 0.8f, 0.001f);
+					imguiSlider("Brake Amort", &universalForce.m_fBrakeAmort, 0.0f, 0.01f, 0.0001f);
 				}
 				
 				if(postIHM == false){
@@ -469,53 +422,7 @@ int main() {
 							click.x = (float(e.button.x) / WINDOW_WIDTH - 0.5f)*2.0;
 							click.y = (float(e.button.y) / WINDOW_HEIGHT - 0.5f)*(-2.0);
 							std::cout << "click : " << click.x << " - " << click.y << std::endl;
-							//~ for(int i = 0; i < polysAndForces.size(); ++i){
-								//~ Polygon poly = polysAndForces[i].first;
-								//~ 
-								//~ float angle = poly.rotationInDegrees;
-								//~ 
-								//~ poly.rotate(-angle);
-								//~ 
-								//~ /*
-								//~ glm::vec2 tempPoint;
-								//~ 
-								//~ 
-								//~ for(int i = 0; i < m_pointsArray.size(); ++i){
-									//~ m_pointsArray[i] = glm::vec2(m_pointsArray[i].x*_cos - m_pointsArray[i].y*_sin, m_pointsArray[i].x*_sin+m_pointsArray[i].y*_cos);
-								//~ }
-								//~ */
-								//~ 
-								//~ float _cos = cos(-3.1416*angle/180.0);
-								//~ float _sin = sin(-3.1416*angle/180.0);
-								//~ 
-								//~ glm::vec2 tempClick = glm::vec2(click.x*_cos - click.y*_sin, click.x*_sin+click.y*_cos);
-								//~ 
-								//~ 
-								//~ float minX = 1000.0;
-								//~ float maxX = -1000.0;
-								//~ float minY = 1000.0;
-								//~ float maxY = -1000.0;
-								//~ 
-								//~ for(int j = 0; j < poly.getSize(); ++j){
-									//~ glm::vec2 p = poly.m_pointsArray[j];
-									//~ (p.x < minX) ? minX = p.x : minX;
-									//~ (p.x > maxX) ? maxX = p.x : maxX;
-									//~ (p.y < minY) ? minY = p.y : minY;
-									//~ (p.y > maxY) ? maxY = p.y : maxY;
-								//~ }
-								//~ 
-								//~ std::cout << "minX : " << minX << ", minY : " << minY << ", maxX : " << maxX << ", maxY : " << maxY << std::endl;
-								//~ 
-								//~ if(tempClick.x > minX && tempClick.x < maxX && tempClick.y > minY && tempClick.y < maxY){
-									//~ std::cout << "In !" << std::endl;
-									//~ polysAndForces.erase(polysAndForces.begin()+i);
-								//~ }else{
-									//~ std::cout << "Out !" << std::endl;
-								//~ }
-								//~ 
-								//~ std::cout << "" << std::endl;
-								//~ 
-							//~ }
+							
 							break;
 							
 						default:
@@ -558,14 +465,14 @@ int main() {
 								config.open ("config.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
 								if (config.is_open())
 								{
-									config << constForce.m_force.y << "\n";
-									config << repulsiveForce.m_fKRep << "\n";
-									config << repulsiveForce.m_fKSticky << "\n";
-									config << repulsiveForce.m_fLInf << "\n";
-									config << repulsiveForce.m_fLSup << "\n";
-									config << brakeForce.m_fV << "\n";
-									config << brakeForce.m_fL << "\n";
-									config << brakeForce.m_fAmort << "\n";
+									config << universalForce.m_fConstL << "\n";
+									config << universalForce.m_fKRep << "\n";
+									config << universalForce.m_fKSticky << "\n";
+									config << universalForce.m_fLInf << "\n";
+									config << universalForce.m_fLSup << "\n";
+									config << universalForce.m_fBrakeV << "\n";
+									config << universalForce.m_fBrakeL << "\n";
+									config << universalForce.m_fBrakeAmort << "\n";
 									std::cout << "Config written \n";
 								} else {
 									std::cout << "Unable to open config \n";
@@ -583,28 +490,28 @@ int main() {
 								std::cout << "Config is open \n";
 								getline (config,value);		
 								std::istringstream(value) >> f; 
-								constForce.m_force.y = f;
+								universalForce.m_fConstL = f;
 								getline (config,value);		
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fKRep = f;
+								universalForce.m_fKRep = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fKSticky = f;
+								universalForce.m_fKSticky = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fLInf = f;
+								universalForce.m_fLInf = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								repulsiveForce.m_fLSup = f;
+								universalForce.m_fLSup = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								brakeForce.m_fV = f;
+								universalForce.m_fBrakeV = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								brakeForce.m_fL = f;
+								universalForce.m_fBrakeL = f;
 								getline (config,value);
 								std::istringstream(value) >> f; 
-								brakeForce.m_fAmort = f;
+								universalForce.m_fBrakeAmort = f;
 								std::cout << "Config loaded \n";
 								config.close();
 							}

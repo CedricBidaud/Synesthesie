@@ -24,10 +24,12 @@ class ParticleManager{
 		glm::vec2 getParticleVelocity(unsigned int i);
 		float getParticleMass(unsigned int i);
 		glm::vec2 getParticleForce(unsigned int i);
+		bool decreaseParticleLifetime(unsigned int i);
 
 		void setParticlePosition(unsigned int i, glm::vec2 position);
 		void setParticleVelocity(unsigned int i, glm::vec2 velocity);
 		void setParticleForce(unsigned int i, glm::vec2 force);
+		void killParticle(unsigned int i);
 		void resetParticleForce(unsigned int i);
 		
 		void clean();
@@ -44,8 +46,8 @@ class ParticleManager{
 		std::vector<float> m_massArray;
 		std::vector<glm::vec2> m_forceArray;
 		std::vector<glm::vec3> m_colorArray;
-		std::vector<int> m_lifeTime;
-		std::vector<int> m_instrument;
+		std::vector<unsigned int> m_lifeTime;
+		std::vector<unsigned int> m_instrument;
 
 };
 
