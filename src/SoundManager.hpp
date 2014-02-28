@@ -38,8 +38,8 @@ class SoundManager{
 		FMOD_CHANNEL *channel;
 		int input, output;
 		int spectrumSize;
-		float minVolume = 1000, maxVolume = 0;
-		int calibrationDuration = 0;
+		float minVolume, maxVolume;
+		int calibrationDuration;
 		
 };
 

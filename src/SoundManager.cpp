@@ -8,7 +8,9 @@
 namespace imac3{
 
 SoundManager::SoundManager(){
-	
+	minVolume = 1000;
+	maxVolume = 0;
+	calibrationDuration = 0;
 }
 
 void SoundManager::PrintInterfaces(){

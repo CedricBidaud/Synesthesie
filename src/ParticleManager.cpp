@@ -12,17 +12,20 @@ ParticleManager::~ParticleManager(){
 	
 }
 
-unsigned int ParticleManager::addParticle(glm::vec2 position, float mass, glm::vec3 color, glm::vec2 velocity) {
+unsigned int ParticleManager::addParticle(glm::vec2 position, float mass, glm::vec3 color, glm::vec2 velocity, unsigned int instrument) {
 	m_positionArray.push_back(position);
 	m_massArray.push_back(mass);
 	m_colorArray.push_back(color);
 	m_velocityArray.push_back(velocity);
 	m_forceArray.push_back(glm::vec2(0.f));
 	m_lifeTime.push_back(100);
+	m_instrument.push_back(instrument);
 	return m_positionArray.size() - 1;
+	
+	
 }
 
-void ParticleManager::addRandomParticles(unsigned int count){
+void ParticleManager::addRandomParticles(unsigned int count, unsigned int instrument){
 	for (int i=0;i<count;++i){
 		glm::vec2 pos = glm::vec2(glm::linearRand(0.5f,0.5f),glm::linearRand(0.75f,0.75f));
 		
@@ -39,8 +42,20 @@ void ParticleManager::addRandomParticles(unsigned int count){
 		float mass = 1.0f;
 		glm::vec3 color = glm::vec3(r,g,b);
 		
-		addParticle(pos, mass, color, direction);
+		addParticle(pos, mass, color, direction, instrument);
 	}
+}
+
+void ParticleManager::addRandomParticle(glm::vec2 position, glm::vec2 velocity, unsigned int instrument){
+	
+	float r = 1.0f;
+	float g = 1.0f;
+	float b = 1.0f;
+	
+	float mass = 1.0f;
+	glm::vec3 color = glm::vec3(r,g,b);
+	
+	addParticle(position, mass, color, velocity, instrument);
 }
 
 
@@ -125,7 +140,7 @@ void ParticleManager::killParticle(unsigned int i){
 	m_velocityArray.erase(m_velocityArray.begin()+i);
 	m_forceArray.erase(m_forceArray.begin()+i);
 	m_lifeTime.erase(m_lifeTime.begin()+i);
-	//~ m_instrument.erase(m_instrument.begin()+i);
+	m_instrument.erase(m_instrument.begin()+i);
 }
 
 

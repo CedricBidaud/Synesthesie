@@ -17,6 +17,7 @@
 #include "UniversalForce.hpp"
 
 #include "SoundManager.hpp"
+#include "Instrument.hpp"
 
 #include "imgui.h"
 #include "imguiRenderGL.h"
@@ -31,6 +32,13 @@ int main() {
     WindowManager wm(WINDOW_WIDTH, WINDOW_HEIGHT, "Synesthésie");
 
     wm.setFramerate(30);
+    
+    // ----
+    // PARTICLES
+    // ----
+    
+    // Création des particules
+    ParticleManager particleManager;
 
 	// ----
 	// SOUND
@@ -44,7 +52,11 @@ int main() {
 	soundManager.Init(spectrumSize);
 	float spectrum[spectrumSize];
 
+	// ----
+	// INSTRUMENTS
+	// ----
 	
+	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, &particleManager);
 
 	// ----
 	// SHADERS
@@ -56,8 +68,7 @@ int main() {
 
     ParticleRenderer2D renderer(&soundManager, particleShader.program, polyShader.program, quadShader.program);
 
-    // Création des particules
-    ParticleManager particleManager;
+   
     //~ particleManager.addRandomParticles(1);
 
 	Leapfrog leapfrog;
@@ -138,6 +149,7 @@ int main() {
 	float blurSize = 4.0f;
 	float particleSize = 1.0f;
 	
+
 	loadGeometry(&vao, vbo, &framebuffer, &texColorBuffer);
 	
 	// fin framebuffer
@@ -166,7 +178,8 @@ int main() {
         renderer.clear();
         
         if(open){
-			particleManager.addRandomParticles(1);
+			//particleManager.addRandomParticles(1, ParticleManager::bass);
+			bass.addParticle();
 		}
 		
 		glViewport(0,0,TEXTURE_WIDTH,TEXTURE_HEIGHT);
