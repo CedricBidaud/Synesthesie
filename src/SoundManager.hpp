@@ -23,6 +23,11 @@ class SoundManager{
 		int ToIndex(int); // Translate a sound frequency into the corresponding spectrum index
 		int ToFrequency(int); // Translate a spectrum index into the corresponding frequency
 		
+		void calibrateVolume(float * spectrum);
+		int getCalibrationDuration();
+		void setCalibrationDuration(int duration);
+		float scaleVolume(float volume);
+		
 		~SoundManager();
 		
 		
@@ -31,6 +36,8 @@ class SoundManager{
 		FMOD_CHANNEL *channel;
 		int input, output;
 		int spectrumSize;
+		float minVolume = 1000, maxVolume = 0;
+		int calibrationDuration = 0;
 		
 };
 

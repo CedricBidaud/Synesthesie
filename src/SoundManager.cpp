@@ -169,6 +169,35 @@ void SoundManager::Update(){
 	FMOD_System_Update(system);
 }
 
+void SoundManager::calibrateVolume(float * spectrum){
+	float vol = GetVolume(spectrum);
+	if(vol > maxVolume) maxVolume = vol;
+	if(vol < minVolume) minVolume = vol;
+	
+	--calibrationDuration;
+	if(calibrationDuration == 0){
+		std::cout << "Calibration terminée" << std::endl;
+		std::cout << "Max volume : " << maxVolume << std::endl;
+		std::cout << "Min volume : " << minVolume << std::endl;
+	}
+}
+
+int SoundManager::getCalibrationDuration(){
+	return calibrationDuration;
+}
+
+void SoundManager::setCalibrationDuration(int duration){
+	calibrationDuration = duration;
+}
+
+float SoundManager::scaleVolume(float volume){
+	if(maxVolume != 0){
+		return((volume - minVolume) / maxVolume);
+	}else{
+		return -1;
+	}
+}
+
 SoundManager::~SoundManager(){
 	
 }

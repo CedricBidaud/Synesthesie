@@ -38,6 +38,8 @@ int main() {
 	
 	int spectrumSize=4096; // Higher means more frequency precision
 	
+	int calibrationDuration = 100;
+	
 	SoundManager soundManager;
 	soundManager.Init(spectrumSize);
 	float spectrum[spectrumSize];
@@ -143,16 +145,25 @@ int main() {
     while(!done) {
         wm.startMainLoop();
 
-        // Rendu
-        renderer.clear();
+        // -------
+        // - SON -
+        // -------
         
         soundManager.GetSpectrum(spectrum);
         //std::cout << soundManager.GetRelMaxFrequency(spectrum, 0, 1500) << std::endl;
 		//repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
 		universalForce.m_fLInf = 0.01+0.2*soundManager.GetVolume(spectrum);
 		//std::cout << repulsiveForce.m_fLInf << std::endl;
+		
+		if(soundManager.getCalibrationDuration() != 0){
+			soundManager.calibrateVolume(spectrum);
+		}
+		
 		soundManager.Update();
         
+        
+        // Rendu
+        renderer.clear();
         
         if(open){
 			particleManager.addRandomParticles(1);
@@ -346,6 +357,10 @@ int main() {
 							done = true;
 							break;
 							
+						case SDLK_v:
+							soundManager.setCalibrationDuration(calibrationDuration);
+							break;
+							
 						case SDLK_SPACE:
 							open = 1;
 							break;
@@ -353,6 +368,10 @@ int main() {
 						case SDLK_c:
 							particleManager.clean();
 							break;
+							
+						//~ case SDLK_k:
+							//~ std::cout << "Scaled volume : " << soundManager.scaleVolume(soundManager.GetVolume(spectrum)) << std::endl;
+							//~ break;
 							
 						case SDLK_s:
 							if (!config.is_open())
