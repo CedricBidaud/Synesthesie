@@ -21,5 +21,9 @@ namespace imac3{
 	unsigned int Instrument::addParticle() {		
 		m_manager->addRandomParticle(m_position, m_velocity, m_lowColor, m_index);
 	}
+	
+	glm::vec3 Instrument::giveColor(glm::vec3 baseColor, float scaledVolume){
+		return glm::vec3(scaledVolume,scaledVolume,scaledVolume);
+	}
 
 } // end namespace imac3
