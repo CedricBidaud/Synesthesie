@@ -13,7 +13,7 @@ WindowManager::WindowManager(uint32_t w, uint32_t h, const char *title) {
         throw std::runtime_error("Unable to initialize SDL");
     }
 
-    if(!SDL_SetVideoMode(w, h, 32, SDL_OPENGL )) {
+    if(!SDL_SetVideoMode(w, h, 32, SDL_OPENGL)) {
         throw std::runtime_error("Unable to open a window");
     }
     SDL_WM_SetCaption(title, 0);

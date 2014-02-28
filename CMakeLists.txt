@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(Imac3-MoteursPhysiques-PartyKel)
+project(Imac3-Synesthésie)
 
 # System libraries
 find_package(OpenGL REQUIRED)
@@ -29,6 +29,6 @@ set(CMAKE_CXX_FLAGS "-std=c++0x")
 file(GLOB_RECURSE SRC_FILES src/*.cpp src/*.hpp)
 
 
-add_executable(PartyKel ${SRC_FILES})
-target_link_libraries(PartyKel glew ${OPENGL_LIBRARIES} ${SDL_LIBRARY} libfmodex64.so)
+add_executable(Synesthésie ${SRC_FILES})
+target_link_libraries(Synesthésie glew ${OPENGL_LIBRARIES} ${SDL_LIBRARY} libfmodex64.so)
 

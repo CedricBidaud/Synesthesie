@@ -13,9 +13,5 @@ CMAKE_PROGRESS_12 = 12
 CMAKE_PROGRESS_13 = 13
 CMAKE_PROGRESS_14 = 14
 CMAKE_PROGRESS_15 = 15
-<<<<<<< HEAD:build/CMakeFiles/PartyKel.dir/progress.make
-=======
 CMAKE_PROGRESS_16 = 16
-CMAKE_PROGRESS_17 = 17
->>>>>>> 742206bc3d070e846f7f5688c07e83d2e83a3e65:build/CMakeFiles/Synesthésie.dir/progress.make
 

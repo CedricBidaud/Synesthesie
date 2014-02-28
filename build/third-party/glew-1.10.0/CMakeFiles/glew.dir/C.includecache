@@ -34,7 +34,7 @@ GL/glew.h
 windows.h
 -
 
-/home/tom/Documents/Synesthesie/third-party/glew-1.10.0/src/glew.c
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/third-party/glew-1.10.0/src/glew.c
 GL/glew.h
 -
 GL/wglew.h
@@ -58,7 +58,7 @@ dlfcn.h
 mach-o/dyld.h
 -
 
-/home/tom/Documents/Synesthesie/third-party/glew-1.10.0/src/glewinfo.c
+/home/cedric/Bureau/Synesthesie/GIT/Synesthesie/third-party/glew-1.10.0/src/glewinfo.c
 stdio.h
 -
 stdlib.h
