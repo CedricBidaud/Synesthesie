@@ -126,26 +126,26 @@ void ParticleRenderer2D::drawParticles(
     glDisable(GL_BLEND);
 }
 
-void ParticleRenderer2D::drawPolygon(uint32_t count,
-                 const glm::vec2* position,
-                 const glm::vec3& color,
-                 float lineWidth) {
-    glBindBuffer(GL_ARRAY_BUFFER, m_PolygonVBOID);
-    glBufferData(GL_ARRAY_BUFFER, count * sizeof(position[0]), position, GL_DYNAMIC_DRAW);
-
-    glDisable(GL_DEPTH_TEST);
-
-    glLineWidth(lineWidth);
-
-    glUseProgram(m_PolygonProgramID);
-
-    glBindVertexArray(m_PolygonVAOID);
-
-    glUniform3fv(m_uPolygonColor, 1, glm::value_ptr(color));
-    glDrawArrays(GL_LINE_LOOP, 0, count);
-
-    glBindVertexArray(0);
-}
+//~ void ParticleRenderer2D::drawPolygon(uint32_t count,
+                 //~ const glm::vec2* position,
+                 //~ const glm::vec3& color,
+                 //~ float lineWidth) {
+    //~ glBindBuffer(GL_ARRAY_BUFFER, m_PolygonVBOID);
+    //~ glBufferData(GL_ARRAY_BUFFER, count * sizeof(position[0]), position, GL_DYNAMIC_DRAW);
+//~ 
+    //~ glDisable(GL_DEPTH_TEST);
+//~ 
+    //~ glLineWidth(lineWidth);
+//~ 
+    //~ glUseProgram(m_PolygonProgramID);
+//~ 
+    //~ glBindVertexArray(m_PolygonVAOID);
+//~ 
+    //~ glUniform3fv(m_uPolygonColor, 1, glm::value_ptr(color));
+    //~ glDrawArrays(GL_LINE_LOOP, 0, count);
+//~ 
+    //~ glBindVertexArray(0);
+//~ }
 
 void ParticleRenderer2D::drawQuad(GLuint vao, GLuint framebuffer, int quadTriangleCount, float blurSize, int passe){
 	glUseProgram(m_QuadProgramID);

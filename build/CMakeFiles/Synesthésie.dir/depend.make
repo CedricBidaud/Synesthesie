@@ -762,6 +762,7 @@ CMakeFiles/Synesthésie.dir/src/main.cpp.o: ../src/UniversalForce.hpp
 CMakeFiles/Synesthésie.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Synesthésie.dir/src/main.cpp.o: ../src/renderer/ParticleRenderer2D.hpp
 CMakeFiles/Synesthésie.dir/src/main.cpp.o: ../src/renderer/WindowManager.hpp
+CMakeFiles/Synesthésie.dir/src/main.cpp.o: ../src/utils.hpp
 
 CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o: ../third-party/glew-1.10.0/include/GL/glew.h
 CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o: ../src/renderer/GLtools.cpp

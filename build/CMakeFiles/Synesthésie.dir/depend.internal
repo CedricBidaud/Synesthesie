@@ -763,6 +763,7 @@ CMakeFiles/Synesthésie.dir/src/main.cpp.o
  /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/main.cpp
  /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/ParticleRenderer2D.hpp
  /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/WindowManager.hpp
+ /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/utils.hpp
 CMakeFiles/Synesthésie.dir/src/renderer/GLtools.cpp.o
  ../third-party/glew-1.10.0/include/GL/glew.h
  /home/cedric/Bureau/Synesthesie/GIT/Synesthesie/src/renderer/GLtools.cpp
