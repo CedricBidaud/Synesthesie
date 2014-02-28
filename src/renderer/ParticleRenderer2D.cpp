@@ -102,7 +102,8 @@ void ParticleRenderer2D::drawParticles(
         const glm::vec2* positionArray,
         const float* massArray,
         const glm::vec3* colorArray,
-        float size) {
+        float size,
+        float volume) {
     // Active la gestion de la transparence
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -115,7 +116,12 @@ void ParticleRenderer2D::drawParticles(
 
     // Dessine chacune des particules
     for(uint32_t i = 0; i < count; ++i) {
-        glUniform3fv(m_uParticleColor, 1, glm::value_ptr(colorArray[i]));
+		if(volume > 0) {
+			glm::vec3 color(volume, volume, volume);
+			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(color));
+		} else {
+			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(colorArray[i]));
+		}
         glUniform2fv(m_uParticlePosition, 1, glm::value_ptr(positionArray[i]));
         glUniform1f(m_uParticleScale, m_fMassScale * size);
         glDrawArrays(GL_TRIANGLE_FAN, 0, 4);

@@ -28,7 +28,8 @@ public:
                        const glm::vec2* positionArray,
                        const float* massArray,
                        const glm::vec3* colorArray,
-                       float size);
+                       float size,
+                       float volume = 0.);
 
     void drawPolygon(uint32_t count,
                      const glm::vec2* position,

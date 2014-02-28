@@ -28,11 +28,11 @@ void ParticleManager::addRandomParticles(unsigned int count){
 		
 		unsigned int nb = this->getSize()*4;
 		float r = 0.0f;
-		float g = 0.0f;
-		float b = 0.1f;
+		float g = 0.8f;
+		float b = 0.5f;
 		
-		r = nb / 255.0f;
-		g = (int(nb / 255.0f) * 25.0f) / 255.0f;
+		//~ r = nb / 255.0f;
+		//~ g = (int(nb / 255.0f) * 25.0f) / 255.0f;
 		//~ b = (g * 100.0f) / 255.0f;
 		
 		glm::vec2 direction = glm::vec2(glm::linearRand(-0.03,-0.05),glm::linearRand(0.05,0.10));
@@ -43,6 +43,7 @@ void ParticleManager::addRandomParticles(unsigned int count){
 	}
 }
 
+
 void ParticleManager::drawParticles(ParticleRenderer2D& renderer) {
 	renderer.drawParticles(
 		m_positionArray.size(),
@@ -51,13 +52,14 @@ void ParticleManager::drawParticles(ParticleRenderer2D& renderer) {
 		&m_colorArray[0]
 	);
 }
-void ParticleManager::drawParticles(ParticleRenderer2D& renderer, float size) {
+void ParticleManager::drawParticles(ParticleRenderer2D& renderer, float size, float volume) {
 	renderer.drawParticles(
 		m_positionArray.size(),
 		&m_positionArray[0],
 		&m_massArray[0],
 		&m_colorArray[0],
-		size
+		size,
+		volume
 	);
 }
 

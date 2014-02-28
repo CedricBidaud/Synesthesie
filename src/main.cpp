@@ -153,6 +153,7 @@ int main() {
 		//std::cout << repulsiveForce.m_fLInf << std::endl;
 		soundManager.Update();
         
+        
         if(open){
 			particleManager.addRandomParticles(1);
 		}
@@ -161,7 +162,7 @@ int main() {
 		// Écriture de l'image dans le framebuffer
 		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 			glClear(GL_COLOR_BUFFER_BIT);
-			particleManager.drawParticles(renderer, particleSize);
+			particleManager.drawParticles(renderer, particleSize, soundManager.GetVolume(spectrum));
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		
 		glViewport(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);

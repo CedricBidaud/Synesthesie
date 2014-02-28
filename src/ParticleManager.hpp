@@ -32,12 +32,14 @@ class ParticleManager{
 		void killParticle(unsigned int i);
 		void resetParticleForce(unsigned int i);
 		
+		void setColorFromVolume();
+		
 		void clean();
 
 		void printForces();
 		
 		void drawParticles(ParticleRenderer2D& renderer);
-		void drawParticles(ParticleRenderer2D& renderer, float size);
+		void drawParticles(ParticleRenderer2D& renderer, float size, float volume = 0.);
 		
 		
 	private:
