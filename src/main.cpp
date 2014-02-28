@@ -56,10 +56,10 @@ int main() {
 	// INSTRUMENTS
 	// ----
 	
-	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, &particleManager);
-	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, &particleManager);
-	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, &particleManager);
-	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, &particleManager);
+	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, glm::vec3(0.5f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), 0, 1000, &particleManager);
+	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, glm::vec3(0.0f, 0.5f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), 0, 5000,&particleManager);
+	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, glm::vec3(0.0f, 0.0f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), 100, 2000,&particleManager);
+	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(1.0f, 1.0f, 1.0f), 100, 2000,&particleManager);
 
 	// ----
 	// SHADERS

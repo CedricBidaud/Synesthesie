@@ -19,7 +19,7 @@ class ParticleManager{
 		unsigned int addParticle(glm::vec2 position, float mass, glm::vec3 color, glm::vec2 velocity, unsigned int instrument);
 		void addRandomParticles(unsigned int count, unsigned int instrument);
 		
-		void addRandomParticle(glm::vec2 position, glm::vec2 velocity, unsigned int instrument);
+		void addRandomParticle(glm::vec2 position, glm::vec2 velocity, glm::vec3 color, unsigned int instrument);
 		
 		unsigned int getSize();
 		void addForce(int i, glm::vec2 force);

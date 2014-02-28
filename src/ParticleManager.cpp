@@ -46,14 +46,9 @@ void ParticleManager::addRandomParticles(unsigned int count, unsigned int instru
 	}
 }
 
-void ParticleManager::addRandomParticle(glm::vec2 position, glm::vec2 velocity, unsigned int instrument){
-	
-	float r = 1.0f;
-	float g = 1.0f;
-	float b = 1.0f;
-	
+void ParticleManager::addRandomParticle(glm::vec2 position, glm::vec2 velocity, glm::vec3 color, unsigned int instrument){
+
 	float mass = 1.0f;
-	glm::vec3 color = glm::vec3(r,g,b);
 	
 	addParticle(position, mass, color, velocity, instrument);
 }
