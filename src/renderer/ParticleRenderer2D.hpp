@@ -4,12 +4,14 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
+#include "../SoundManager.hpp"
+
 namespace imac3 {
 
 class ParticleRenderer2D {
 public:
     ParticleRenderer2D(float massScale = 0.05);
-    ParticleRenderer2D(GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, float massScale = 0.05);
+    ParticleRenderer2D(SoundManager * soundManager, GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, float massScale = 0.05);
 
     ~ParticleRenderer2D();
 
@@ -62,6 +64,8 @@ private:
 
     // Scale appliqué sur la masse de chaque particule pour obtenir sa taille
     float m_fMassScale;
+    
+    SoundManager * soundManager;
 };
 
 }

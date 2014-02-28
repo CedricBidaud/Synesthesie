@@ -190,6 +190,14 @@ void SoundManager::setCalibrationDuration(int duration){
 	calibrationDuration = duration;
 }
 
+float SoundManager::getMaxVolume(){
+	return maxVolume;
+}
+
+float SoundManager::getMinVolume(){
+	return minVolume;
+}
+
 float SoundManager::scaleVolume(float volume){
 	if(maxVolume != 0){
 		return((volume - minVolume) / maxVolume);

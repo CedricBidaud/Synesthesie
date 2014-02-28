@@ -5,8 +5,10 @@
 
 namespace imac3 {
 
+
 // shaders écrits dans des fichiers externes
-ParticleRenderer2D::ParticleRenderer2D(GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, float massScale):
+ParticleRenderer2D::ParticleRenderer2D(SoundManager * soundManager, GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, float massScale):
+    soundManager(soundManager),
     m_ProgramID(particleProgram),
     m_PolygonProgramID(polyProgram),
     m_QuadProgramID(quadProgram),
@@ -116,8 +118,9 @@ void ParticleRenderer2D::drawParticles(
 
     // Dessine chacune des particules
     for(uint32_t i = 0; i < count; ++i) {
-		if(volume > 0) {
-			glm::vec3 color(volume, volume, volume);
+		if(soundManager->getMaxVolume() > 0) {
+			//~ glm::vec3 color = colorArray[i] + glm::vec3(0, 0, volume);
+			glm::vec3 color = colorArray[i] + glm::vec3(0, 0, soundManager->scaleVolume(volume));
 			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(color));
 		} else {
 			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(colorArray[i]));

@@ -54,7 +54,7 @@ int main() {
     ShaderGLSL particleShader, polyShader, quadShader;
 	loadShaders(&particleShader, &polyShader, &quadShader);
 
-    ParticleRenderer2D renderer(particleShader.program, polyShader.program, quadShader.program);
+    ParticleRenderer2D renderer(&soundManager, particleShader.program, polyShader.program, quadShader.program);
 
     // Création des particules
     ParticleManager particleManager;

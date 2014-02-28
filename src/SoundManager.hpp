@@ -17,6 +17,8 @@ class SoundManager{
 		float GetRelMaxFrequency(float*); // Default values : 0Hz > 22050Hz
 		float GetVolume(float*, int, int);
 		float GetVolume(float*);
+		float getMaxVolume();
+		float getMinVolume();
 		
 		void Update();
 		
