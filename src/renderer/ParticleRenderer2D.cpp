@@ -1,5 +1,6 @@
 #include "ParticleRenderer2D.hpp"
 #include "GLtools.hpp"
+#include "../Instrument.hpp"
 
 #include <glm/gtc/type_ptr.hpp>
 
@@ -28,7 +29,7 @@ ParticleRenderer2D::ParticleRenderer2D(SoundManager * soundManager, GLuint parti
     glGenBuffers(1, &m_VBOID);
     glBindBuffer(GL_ARRAY_BUFFER, m_VBOID);
 
-    // Une particule est un carrÃ©
+    // Une particule est un carré
     GLfloat positions[] = {
         -1.f, -1.f,
          1.f, -1.f,
@@ -119,8 +120,8 @@ void ParticleRenderer2D::drawParticles(
     // Dessine chacune des particules
     for(uint32_t i = 0; i < count; ++i) {
 		if(soundManager->getMaxVolume() > 0) {
-			//~ glm::vec3 color = colorArray[i] + glm::vec3(0, 0, volume);
-			glm::vec3 color = colorArray[i] + glm::vec3(0, 0, soundManager->scaleVolume(volume));
+			// renvoyer la bonne couleur en fonction de l'instrument de la particule
+			glm::vec3 color = Instrument::giveColor(glm::vec3(0.), soundManager->scaleVolume(volume));
 			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(color));
 		} else {
 			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(colorArray[i]));

@@ -20,6 +20,8 @@ class Instrument{
 		
 		enum e_instrument { drums, bass, guitarA, guitarB };
 		
+		static glm::vec3 giveColor(glm::vec3 baseColor, float scaledVolume);
+		
 	private:
 		glm::vec2 m_position;
 		glm::vec2 m_velocity;
