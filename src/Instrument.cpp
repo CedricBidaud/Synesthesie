@@ -7,6 +7,7 @@ namespace imac3{
 		m_velocity = velocity;
 		m_index = index;
 		m_manager = manager;
+		open=false;
 	}
 
 	Instrument::~Instrument(){

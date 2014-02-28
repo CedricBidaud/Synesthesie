@@ -57,6 +57,9 @@ int main() {
 	// ----
 	
 	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, &particleManager);
+	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, &particleManager);
+	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, &particleManager);
+	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, &particleManager);
 
 	// ----
 	// SHADERS
@@ -177,9 +180,17 @@ int main() {
         // Rendu
         renderer.clear();
         
-        if(open){
-			//particleManager.addRandomParticles(1, ParticleManager::bass);
+        if(bass.open){
 			bass.addParticle();
+		}
+		if(drums.open){
+			drums.addParticle();
+		}
+		if(guitarA.open){
+			guitarA.addParticle();
+		}
+		if(guitarB.open){
+			guitarB.addParticle();
 		}
 		
 		glViewport(0,0,TEXTURE_WIDTH,TEXTURE_HEIGHT);
@@ -360,6 +371,23 @@ int main() {
 						case SDLK_SPACE:
 							open = 0;
 							break;	
+							
+						// Instruments
+						case SDLK_UP:
+							drums.open = 0;
+							break;
+						
+						case SDLK_DOWN:
+							bass.open = 0;
+							break;
+							
+						case SDLK_LEFT:
+							guitarA.open = 0;
+							break;
+							
+						case SDLK_RIGHT:
+							guitarB.open = 0;
+							break;
 					}
 					break;	
 					
@@ -376,6 +404,23 @@ int main() {
 							
 						case SDLK_SPACE:
 							open = 1;
+							break;
+							
+						// Instruments
+						case SDLK_UP:
+							drums.open = 1;
+							break;
+						
+						case SDLK_DOWN:
+							bass.open = 1;
+							break;
+							
+						case SDLK_LEFT:
+							guitarA.open = 1;
+							break;
+							
+						case SDLK_RIGHT:
+							guitarB.open = 1;
 							break;
 							
 						case SDLK_c:

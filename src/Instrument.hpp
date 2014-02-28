@@ -17,7 +17,8 @@ class Instrument{
 		Instrument(glm::vec2 position, glm::vec2 velocity, int index, ParticleManager* manager);
 		~Instrument();
 		unsigned int addParticle();
-		
+	
+		bool open;
 		enum e_instrument { drums, bass, guitarA, guitarB };
 		
 	private:
