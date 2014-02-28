@@ -214,6 +214,8 @@ int main() {
     while(!done) {
         wm.startMainLoop();
 
+		// commentaire useless
+
         // Rendu
         renderer.clear();
         
