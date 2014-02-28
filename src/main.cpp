@@ -401,7 +401,15 @@ int main() {
 							break;
 					}
 					break;
+					
+				case SDL_KEYUP:
+					switch(e.key.keysym.sym){
 							
+						case SDLK_SPACE:
+							open = 0;
+							break;	
+					}
+					break;	
 					
 					
 				case SDL_KEYDOWN:
@@ -411,7 +419,7 @@ int main() {
 							break;
 							
 						case SDLK_SPACE:
-							open = !open;
+							open = 1;
 							break;
 							
 						case SDLK_c:
