@@ -113,7 +113,7 @@ void ParticleManager::resetParticleForce(unsigned int i){
 
 bool ParticleManager::decreaseParticleLifetime(unsigned int i) {
 	//~ std::cout << "lifetime : " << m_lifeTime[i] << std::endl;
-	return (--m_lifeTime[i] == 0);
+	return (--m_lifeTime[i] == 0); 
 }
 
 void ParticleManager::killParticle(unsigned int i){
