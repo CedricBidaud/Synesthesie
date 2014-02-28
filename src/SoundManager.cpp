@@ -11,6 +11,7 @@ SoundManager::SoundManager(){
 	minVolume = 1000;
 	maxVolume = 0;
 	calibrationDuration = 0;
+	//~ m_band = band;
 }
 
 void SoundManager::PrintInterfaces(){

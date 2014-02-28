@@ -44,6 +44,8 @@ class ParticleManager{
 		void drawParticles(ParticleRenderer2D& renderer);
 		void drawParticles(ParticleRenderer2D& renderer, float size, float volume = 0.);
 		
+		unsigned int getInstrument(unsigned int i);
+		
 		
 	private:
 		std::vector<glm::vec2> m_positionArray;

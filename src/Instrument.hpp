@@ -8,22 +8,20 @@
 
 #include <iostream>
 
-#include "ParticleManager.hpp"
-
 namespace imac3 {
 
 class Instrument{
 	public:
-		Instrument(glm::vec2 position, glm::vec2 velocity, int index, glm::vec3 lowColor, glm::vec3 highColor, int lowBound, int highBound, ParticleManager* manager);
+		Instrument(glm::vec2 position, glm::vec2 velocity, int index, glm::vec3 lowColor, glm::vec3 highColor, int lowBound, int highBound);
 		~Instrument();
 		unsigned int addParticle();
 	
 		bool open;
 		enum e_instrument { drums, bass, guitarA, guitarB };
 		
-		static glm::vec3 giveColor(glm::vec3 baseColor, float scaledVolume);
+		glm::vec3 giveColor(float scaledVolume);
 		
-	private:
+	//~ private:
 		glm::vec3 m_lowColor;
 		glm::vec3 m_highColor;
 		int m_lowBound; //Hz
@@ -31,7 +29,6 @@ class Instrument{
 		glm::vec2 m_position;
 		glm::vec2 m_velocity;
 		int m_index;
-		ParticleManager* m_manager;
 		
 };
 

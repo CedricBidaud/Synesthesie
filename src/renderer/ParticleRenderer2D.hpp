@@ -5,13 +5,14 @@
 #include <glm/glm.hpp>
 
 #include "../SoundManager.hpp"
+#include "../Instrument.hpp"
 
 namespace imac3 {
 
 class ParticleRenderer2D {
 public:
     ParticleRenderer2D(float massScale = 0.05);
-    ParticleRenderer2D(SoundManager * soundManager, GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, float massScale = 0.05);
+    ParticleRenderer2D(SoundManager * soundManager, GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, std::vector<Instrument> band, float massScale = 0.05);
 
     ~ParticleRenderer2D();
 
@@ -30,6 +31,7 @@ public:
                        const glm::vec2* positionArray,
                        const float* massArray,
                        const glm::vec3* colorArray,
+                       unsigned int * instrumentArray,
                        float size,
                        float volume = 0.);
 
@@ -66,6 +68,8 @@ private:
     float m_fMassScale;
     
     SoundManager * soundManager;
+    
+    std::vector<Instrument> m_band;
 };
 
 }

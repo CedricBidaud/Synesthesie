@@ -8,12 +8,14 @@ namespace imac3 {
 
 
 // shaders écrits dans des fichiers externes
-ParticleRenderer2D::ParticleRenderer2D(SoundManager * soundManager, GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, float massScale):
+ParticleRenderer2D::ParticleRenderer2D(SoundManager * soundManager, GLuint particleProgram, GLuint polyProgram, GLuint quadProgram, std::vector<Instrument> band, float massScale):
     soundManager(soundManager),
     m_ProgramID(particleProgram),
     m_PolygonProgramID(polyProgram),
     m_QuadProgramID(quadProgram),
     m_fMassScale(massScale) {
+		
+	m_band = band;
 
     // RÃ©cuperation des uniforms
     m_uParticleColor = glGetUniformLocation(m_ProgramID, "uParticleColor");
@@ -105,6 +107,7 @@ void ParticleRenderer2D::drawParticles(
         const glm::vec2* positionArray,
         const float* massArray,
         const glm::vec3* colorArray,
+        unsigned int * instrumentArray,
         float size,
         float volume) {
     // Active la gestion de la transparence
@@ -116,12 +119,41 @@ void ParticleRenderer2D::drawParticles(
     glUseProgram(m_ProgramID);
 
     glBindVertexArray(m_VAOID);
+    
+    glm::vec3 bassColor = m_band[Instrument::bass].giveColor(soundManager->scaleVolume(volume));
+    glm::vec3 drumsColor = m_band[Instrument::drums].giveColor(soundManager->scaleVolume(volume));
+    glm::vec3 guitarAColor = m_band[Instrument::guitarA].giveColor(soundManager->scaleVolume(volume));
+    glm::vec3 guitarBColor = m_band[Instrument::guitarB].giveColor(soundManager->scaleVolume(volume));
 
     // Dessine chacune des particules
     for(uint32_t i = 0; i < count; ++i) {
 		if(soundManager->getMaxVolume() > 0) {
 			// renvoyer la bonne couleur en fonction de l'instrument de la particule
-			glm::vec3 color = Instrument::giveColor(glm::vec3(0.), soundManager->scaleVolume(volume));
+			//~ glm::vec3 color = Instrument::giveColor(glm::vec3(0.), soundManager->scaleVolume(volume));
+			glm::vec3 color;
+			
+			switch(instrumentArray[i]){
+				case Instrument::bass:
+					color = bassColor;
+					break;
+					
+				case Instrument::drums:
+					color = drumsColor;
+					break;
+					
+				case Instrument::guitarA:
+					color = guitarAColor;
+					break;
+					
+				case Instrument::guitarB:
+					color = guitarBColor;
+					break;
+					
+				default:
+					color = glm::vec3(1.);
+					break;
+			};
+			
 			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(color));
 		} else {
 			glUniform3fv(m_uParticleColor, 1, glm::value_ptr(colorArray[i]));

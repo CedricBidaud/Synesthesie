@@ -3,6 +3,8 @@
 
 #include <FMOD/fmod.h>
 
+//~ #include "Instrument.hpp"
+
 namespace imac3 {
 
 class SoundManager{

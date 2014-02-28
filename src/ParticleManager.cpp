@@ -68,6 +68,7 @@ void ParticleManager::drawParticles(ParticleRenderer2D& renderer, float size, fl
 		&m_positionArray[0],
 		&m_massArray[0],
 		&m_colorArray[0],
+		&m_instrument[0],
 		size,
 		volume
 	);
@@ -102,6 +103,10 @@ glm::vec2 ParticleManager::getParticleVelocity(unsigned int i){
 
 glm::vec2 ParticleManager::getParticleForce(unsigned int i){
 	return m_forceArray[i];
+}
+
+unsigned int ParticleManager::getInstrument(unsigned int i){
+	return m_instrument[i];
 }
 
 void ParticleManager::setParticlePosition(unsigned int i, glm::vec2 position){

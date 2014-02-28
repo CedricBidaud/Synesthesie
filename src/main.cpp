@@ -40,6 +40,22 @@ int main() {
     // Création des particules
     ParticleManager particleManager;
 
+
+	// ----
+	// INSTRUMENTS
+	// ----
+	
+	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, glm::vec3(0.1f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), 0, 1000);
+	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), 0, 5000);
+	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, glm::vec3(0.0f, 0.0f, 0.1f), glm::vec3(0.0f, 1.0f, 1.0f), 100, 2000);
+	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, glm::vec3(0.2f, 0.2f, 0.2f), glm::vec3(1.0f, 1.0f, 1.0f), 100, 2000);
+	
+	std::vector<Instrument> band;
+	band.push_back(bass);
+	band.push_back(drums);
+	band.push_back(guitarA);
+	band.push_back(guitarB);
+
 	// ----
 	// SOUND
 	// ----
@@ -51,15 +67,7 @@ int main() {
 	SoundManager soundManager;
 	soundManager.Init(spectrumSize);
 	float spectrum[spectrumSize];
-
-	// ----
-	// INSTRUMENTS
-	// ----
 	
-	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, glm::vec3(0.5f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), 0, 1000, &particleManager);
-	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, glm::vec3(0.0f, 0.5f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), 0, 5000,&particleManager);
-	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, glm::vec3(0.0f, 0.0f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), 100, 2000,&particleManager);
-	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(1.0f, 1.0f, 1.0f), 100, 2000,&particleManager);
 
 	// ----
 	// SHADERS
@@ -69,7 +77,7 @@ int main() {
     ShaderGLSL particleShader, polyShader, quadShader;
 	loadShaders(&particleShader, &polyShader, &quadShader);
 
-    ParticleRenderer2D renderer(&soundManager, particleShader.program, polyShader.program, quadShader.program);
+    ParticleRenderer2D renderer(&soundManager, particleShader.program, polyShader.program, quadShader.program, band);
 
    
     //~ particleManager.addRandomParticles(1);
@@ -181,16 +189,20 @@ int main() {
         renderer.clear();
         
         if(bass.open){
-			bass.addParticle();
+			//~ bass.addParticle();addRandomParticle(m_position, m_velocity, m_lowColor, m_index);
+			particleManager.addRandomParticle(bass.m_position, bass.m_velocity, bass.m_lowColor, bass.m_index);
 		}
 		if(drums.open){
-			drums.addParticle();
+			//~ drums.addParticle();
+			particleManager.addRandomParticle(drums.m_position, drums.m_velocity, drums.m_lowColor, drums.m_index);
 		}
 		if(guitarA.open){
-			guitarA.addParticle();
+			//~ guitarA.addParticle();
+			particleManager.addRandomParticle(guitarA.m_position, guitarA.m_velocity, guitarA.m_lowColor, guitarA.m_index);
 		}
 		if(guitarB.open){
-			guitarB.addParticle();
+			//~ guitarB.addParticle();
+			particleManager.addRandomParticle(guitarB.m_position, guitarB.m_velocity, guitarB.m_lowColor, guitarB.m_index);
 		}
 		
 		glViewport(0,0,TEXTURE_WIDTH,TEXTURE_HEIGHT);
