@@ -108,6 +108,7 @@ void ParticleRenderer2D::drawParticles(
         const float* massArray,
         const glm::vec3* colorArray,
         unsigned int * instrumentArray,
+        int * lifetimeArray,
         float size,
         float volume) {
     // Active la gestion de la transparence
@@ -132,25 +133,28 @@ void ParticleRenderer2D::drawParticles(
 			//~ glm::vec3 color = Instrument::giveColor(glm::vec3(0.), soundManager->scaleVolume(volume));
 			glm::vec3 color;
 			
+			float coef = float(lifetimeArray[i]) / 100.f;
+			//~ std::cout << "coef : " << coef << std::endl;
+			
 			switch(instrumentArray[i]){
 				case Instrument::bass:
-					color = bassColor;
+					color = bassColor*coef;
 					break;
 					
 				case Instrument::drums:
-					color = drumsColor;
+					color = drumsColor*coef;
 					break;
 					
 				case Instrument::guitarA:
-					color = guitarAColor;
+					color = guitarAColor*coef;
 					break;
 					
 				case Instrument::guitarB:
-					color = guitarBColor;
+					color = guitarBColor*coef;
 					break;
 					
 				default:
-					color = glm::vec3(1.);
+					color = glm::vec3(1.)*coef;
 					break;
 			};
 			

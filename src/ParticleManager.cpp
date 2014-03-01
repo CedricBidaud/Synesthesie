@@ -18,7 +18,7 @@ unsigned int ParticleManager::addParticle(glm::vec2 position, float mass, glm::v
 	m_colorArray.push_back(color);
 	m_velocityArray.push_back(velocity);
 	m_forceArray.push_back(glm::vec2(0.f));
-	m_lifeTime.push_back(100);
+	m_lifeTime.push_back(200);
 	m_instrument.push_back(instrument);
 	return m_positionArray.size() - 1;
 	
@@ -69,6 +69,7 @@ void ParticleManager::drawParticles(ParticleRenderer2D& renderer, float size, fl
 		&m_massArray[0],
 		&m_colorArray[0],
 		&m_instrument[0],
+		&m_lifeTime[0],
 		size,
 		volume
 	);
@@ -130,6 +131,7 @@ void ParticleManager::resetParticleForce(unsigned int i){
 
 bool ParticleManager::decreaseParticleLifetime(unsigned int i) {
 	//~ std::cout << "lifetime : " << m_lifeTime[i] << std::endl;
+	
 	return (--m_lifeTime[i] == 0); 
 }
 

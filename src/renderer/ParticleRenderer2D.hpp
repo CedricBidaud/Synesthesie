@@ -32,6 +32,7 @@ public:
                        const float* massArray,
                        const glm::vec3* colorArray,
                        unsigned int * instrumentArray,
+                       int * lifetimeArray,
                        float size,
                        float volume = 0.);
 

@@ -53,7 +53,7 @@ class ParticleManager{
 		std::vector<float> m_massArray;
 		std::vector<glm::vec2> m_forceArray;
 		std::vector<glm::vec3> m_colorArray;
-		std::vector<unsigned int> m_lifeTime;
+		std::vector<int> m_lifeTime;
 		std::vector<unsigned int> m_instrument;
 		
 
