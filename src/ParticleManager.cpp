@@ -18,7 +18,7 @@ unsigned int ParticleManager::addParticle(glm::vec2 position, float mass, glm::v
 	m_colorArray.push_back(color);
 	m_velocityArray.push_back(velocity);
 	m_forceArray.push_back(glm::vec2(0.f));
-	m_lifeTime.push_back(200);
+	m_lifeTime.push_back(120);
 	m_instrument.push_back(instrument);
 	return m_positionArray.size() - 1;
 	

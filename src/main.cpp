@@ -45,10 +45,10 @@ int main() {
 	// INSTRUMENTS
 	// ----
 	
-	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, glm::vec3(0.1f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), 0, 1000);
-	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), 0, 5000);
-	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, glm::vec3(0.0f, 0.0f, 0.1f), glm::vec3(0.0f, 1.0f, 1.0f), 100, 2000);
-	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, glm::vec3(0.2f, 0.2f, 0.2f), glm::vec3(1.0f, 1.0f, 1.0f), 100, 2000);
+	Instrument drums(glm::vec2(-0.3f, -0.5f), glm::vec2(-0.04, 0.07), Instrument::bass, glm::vec3(0.1f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), 0, 5000);
+	Instrument bass(glm::vec2(0.3f, 0.5f), glm::vec2(-0.04, 0.07), Instrument::drums, glm::vec3((102.0f/255.0f) * 0.1f, 0.0f, (255.0f/255.0f) * 0.1f), glm::vec3(102.0f/255.0f, 0.0f, 255.0f/255.0f), 0, 1000);
+	Instrument guitarA(glm::vec2(-0.5f, 0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarA, glm::vec3(0.0f, (184.0f/255.0f) * 0.1f, 0.1f), glm::vec3(0.0f, (184.0f/255.0f), 1.0f), 100, 2000);
+	Instrument guitarB(glm::vec2(0.5f, -0.3f), glm::vec2(-0.04, 0.07), Instrument::guitarB, glm::vec3(1.0f * 0.1f, (13.0f/255.0f) * 0.1f, (13.0f/255.0f) * 0.1f), glm::vec3(1.0f, (102.0f/255.0f), (102.0f/255.0f)), 100, 2000);
 	
 	std::vector<Instrument> band;
 	band.push_back(bass);
@@ -62,7 +62,7 @@ int main() {
 	
 	int spectrumSize=4096; // Higher means more frequency precision
 	
-	int calibrationDuration = 100;
+	int calibrationDuration = 500;
 	
 	SoundManager soundManager;
 	soundManager.Init(spectrumSize);
@@ -175,7 +175,8 @@ int main() {
         soundManager.GetSpectrum(spectrum);
         //std::cout << soundManager.GetRelMaxFrequency(spectrum, 0, 1500) << std::endl;
 		//repulsiveForce.m_fLInf = 0.05+(spectrum[80]+spectrum[160]+spectrum[240]+spectrum[400]+spectrum[800]+spectrum[3200])*8;
-		universalForce.m_fLInf = 0.01+0.2*soundManager.GetVolume(spectrum);
+		universalForce.m_fLInf = 0.01+0.15*log(soundManager.GetVolume(spectrum));
+		//~ universalForce.m_fLInf = 0.01+5.0*soundManager.GetRelMaxFrequency(spectrum);
 		//std::cout << repulsiveForce.m_fLInf << std::endl;
 		
 		if(soundManager.getCalibrationDuration() != 0){
@@ -411,6 +412,7 @@ int main() {
 							break;
 							
 						case SDLK_v:
+							soundManager.initCalibration();
 							soundManager.setCalibrationDuration(calibrationDuration);
 							break;
 							

@@ -172,6 +172,11 @@ void SoundManager::Update(){
 	FMOD_System_Update(system);
 }
 
+void SoundManager::initCalibration(){
+	maxVolume = 0;
+	minVolume = 1000;
+}
+
 void SoundManager::calibrateVolume(float * spectrum){
 	float vol = GetVolume(spectrum);
 	if(vol > maxVolume) maxVolume = vol;
