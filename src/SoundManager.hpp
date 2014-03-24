@@ -22,6 +22,8 @@ class SoundManager{
 		float getMaxVolume();
 		float getMinVolume();
 		
+		void setMinMax(float min, float max);
+		
 		void Update();
 		
 		int ToIndex(int); // Translate a sound frequency into the corresponding spectrum index

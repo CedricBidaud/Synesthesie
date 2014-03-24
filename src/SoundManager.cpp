@@ -214,6 +214,11 @@ float SoundManager::scaleVolume(float volume){
 	}
 }
 
+void SoundManager::setMinMax(float min, float max){
+	minVolume = min;
+	maxVolume = max;
+}
+
 SoundManager::~SoundManager(){
 	
 }

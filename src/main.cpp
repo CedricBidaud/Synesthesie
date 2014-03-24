@@ -451,14 +451,16 @@ int main() {
 								config.open ("config.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
 								if (config.is_open())
 								{
-									config << universalForce.m_fConstL << "\n";
-									config << universalForce.m_fKRep << "\n";
-									config << universalForce.m_fKSticky << "\n";
-									config << universalForce.m_fLInf << "\n";
-									config << universalForce.m_fLSup << "\n";
-									config << universalForce.m_fBrakeV << "\n";
-									config << universalForce.m_fBrakeL << "\n";
-									config << universalForce.m_fBrakeAmort << "\n";
+									config << soundManager.getMaxVolume() << "\n";
+									config << soundManager.getMinVolume() << "\n";
+									//~ config << universalForce.m_fConstL << "\n";
+									//~ config << universalForce.m_fKRep << "\n";
+									//~ config << universalForce.m_fKSticky << "\n";
+									//~ config << universalForce.m_fLInf << "\n";
+									//~ config << universalForce.m_fLSup << "\n";
+									//~ config << universalForce.m_fBrakeV << "\n";
+									//~ config << universalForce.m_fBrakeL << "\n";
+									//~ config << universalForce.m_fBrakeAmort << "\n";
 									std::cout << "Config written \n";
 								} else {
 									std::cout << "Unable to open config \n";
@@ -476,28 +478,31 @@ int main() {
 								std::cout << "Config is open \n";
 								getline (config,value);		
 								std::istringstream(value) >> f; 
-								universalForce.m_fConstL = f;
+								float max = f;
 								getline (config,value);		
 								std::istringstream(value) >> f; 
-								universalForce.m_fKRep = f;
-								getline (config,value);
-								std::istringstream(value) >> f; 
-								universalForce.m_fKSticky = f;
-								getline (config,value);
-								std::istringstream(value) >> f; 
-								universalForce.m_fLInf = f;
-								getline (config,value);
-								std::istringstream(value) >> f; 
-								universalForce.m_fLSup = f;
-								getline (config,value);
-								std::istringstream(value) >> f; 
-								universalForce.m_fBrakeV = f;
-								getline (config,value);
-								std::istringstream(value) >> f; 
-								universalForce.m_fBrakeL = f;
-								getline (config,value);
-								std::istringstream(value) >> f; 
-								universalForce.m_fBrakeAmort = f;
+								float min = f;
+								
+								soundManager.setMinMax(min, max);
+								
+								//~ getline (config,value);
+								//~ std::istringstream(value) >> f; 
+								//~ universalForce.m_fKSticky = f;
+								//~ getline (config,value);
+								//~ std::istringstream(value) >> f; 
+								//~ universalForce.m_fLInf = f;
+								//~ getline (config,value);
+								//~ std::istringstream(value) >> f; 
+								//~ universalForce.m_fLSup = f;
+								//~ getline (config,value);
+								//~ std::istringstream(value) >> f; 
+								//~ universalForce.m_fBrakeV = f;
+								//~ getline (config,value);
+								//~ std::istringstream(value) >> f; 
+								//~ universalForce.m_fBrakeL = f;
+								//~ getline (config,value);
+								//~ std::istringstream(value) >> f; 
+								//~ universalForce.m_fBrakeAmort = f;
 								std::cout << "Config loaded \n";
 								config.close();
 							}
