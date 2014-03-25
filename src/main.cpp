@@ -160,6 +160,7 @@ int main() {
 	float blurSize = 4.0f;
 	float particleSize = 1.0f;
 	
+	bool ALLOPEN = false;
 
 	loadGeometry(&vao, vbo, &framebuffer, &texColorBuffer);
 	
@@ -184,6 +185,13 @@ int main() {
 		}
 		
 		soundManager.Update();
+        
+        if(ALLOPEN){
+			bass.open = 1;
+			drums.open = 1;
+			guitarA.open = 1;
+			guitarB.open = 1;
+		}
         
         
         // Rendu
@@ -224,6 +232,9 @@ int main() {
 
         
         leapfrog.solve(particleManager, dt);
+        
+        std::cerr << ALLOPEN << std::endl;
+        std::cerr << drums.open << bass.open << guitarA.open << guitarB.open << std::endl;
         
         
         // --- IMGUI ---
@@ -387,18 +398,22 @@ int main() {
 							
 						// Instruments
 						case SDLK_UP:
+							if(!ALLOPEN)
 							drums.open = 0;
 							break;
 						
 						case SDLK_DOWN:
+						if(!ALLOPEN)
 							bass.open = 0;
 							break;
 							
 						case SDLK_LEFT:
+						if(!ALLOPEN)
 							guitarA.open = 0;
 							break;
 							
 						case SDLK_RIGHT:
+						if(!ALLOPEN)
 							guitarB.open = 0;
 							break;
 					}
@@ -439,6 +454,10 @@ int main() {
 							
 						case SDLK_c:
 							particleManager.clean();
+							break;
+							
+						case SDLK_a:
+							ALLOPEN = !ALLOPEN;
 							break;
 							
 						//~ case SDLK_k:
